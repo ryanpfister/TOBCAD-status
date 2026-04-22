@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:26:24Z"
+    "checkedAt": "2026-04-22T16:28:12Z"
   },
-  "generatedAt": "2026-04-22T16:26:25.245Z",
+  "generatedAt": "2026-04-22T16:28:12.722Z",
   "items": [
+    {
+      "number": 46,
+      "title": "[FEATURE]: Dispatch log",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "On specifically the dispatchers side, could every single one of their entries be tracked on a dispatch log along with manual entried (when we run dmv and stuffl ike that), similar to the paper one they have now to replace it?",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 44,
       "title": "Allow users to delete user accounts",
