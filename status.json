@@ -1,9 +1,9 @@
 {
   "serverStatus": {
-    "status": "Unknown",
-    "statusCode": "-",
-    "checkedAt": "-"
+    "status": "Online",
+    "statusCode": "200",
+    "checkedAt": "2026-04-22T14:28:52Z"
   },
-  "generatedAt": "-",
+  "generatedAt": "2026-04-22T14:28:52.617Z",
   "items": []
 }
