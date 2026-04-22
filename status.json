@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:45:29Z"
+    "checkedAt": "2026-04-22T14:46:08Z"
   },
-  "generatedAt": "2026-04-22T14:45:29.291Z",
+  "generatedAt": "2026-04-22T14:46:08.925Z",
   "items": [
     {
       "number": 31,
@@ -175,9 +175,18 @@
       "description": "If multiple units are signed in as the same callsign (for example 2 201's) dont allow it, allow the officer who is signing in to kick the other 201 off, but give them an option in case they forgot to sign out.\n\nAlso sometimes we have two units riding in 1 car, allow this to happen as well.",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:45:58Z",
+          "updatedShort": "2026-04-22",
+          "body": "Currently in progress",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 21,
