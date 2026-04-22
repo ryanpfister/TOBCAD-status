@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:02:34Z"
+    "checkedAt": "2026-04-22T16:04:14Z"
   },
-  "generatedAt": "2026-04-22T16:02:35.996Z",
+  "generatedAt": "2026-04-22T16:04:14.263Z",
   "items": [
     {
       "number": 44,
@@ -164,8 +164,8 @@
       "number": 32,
       "title": "[FEATURE]: Closing / submitting memo book",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nSubmitting Memo Book\n\n### Summary\n\nWhen submitting the memo book for review this should be like the end of tour we want to change this process to submit the memo book, put the unit out of service, and log the unit out for the day. They should no longer be on the board or anything.\n\n### What problem would this solve?\n\nLogging Out\n\n### Proposed Solution\n\nSee Comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nMedium\n\n### Area\n\nOther\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Conf...",
       "images": [],
