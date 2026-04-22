@@ -227,6 +227,13 @@
       word-break: break-word;
     }
 
+    .description.compact {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
     .attachments,
     .image-grid,
     .comment-attachments,
@@ -286,6 +293,23 @@
       font-size: 13px;
       color: #6b7280;
       margin-top: 10px;
+    }
+
+    .issue-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .action-btn {
+      background: #eef2ff;
+      color: #3730a3;
+      border: none;
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .toggle-comments-btn {
@@ -350,7 +374,8 @@
       text-align: center;
     }
 
-    .lightbox {
+    .lightbox,
+    .modal-overlay {
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.82);
@@ -361,7 +386,8 @@
       z-index: 9999;
     }
 
-    .lightbox.open {
+    .lightbox.open,
+    .modal-overlay.open {
       display: flex;
     }
 
@@ -372,7 +398,8 @@
       background: white;
     }
 
-    .lightbox-close {
+    .lightbox-close,
+    .modal-close {
       position: absolute;
       top: 16px;
       right: 18px;
@@ -380,6 +407,50 @@
       font-size: 34px;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    .modal-card {
+      width: min(1100px, 96vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+      color: #1f2937;
+    }
+
+    .modal-close {
+      color: #111827;
+      top: 12px;
+      right: 16px;
+      font-size: 30px;
+    }
+
+    .modal-header {
+      margin-bottom: 14px;
+      padding-right: 30px;
+    }
+
+    .modal-header h2 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      word-break: break-word;
+    }
+
+    .modal-section {
+      margin-top: 20px;
+    }
+
+    .modal-section h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .modal-description {
+      white-space: pre-wrap;
+      line-height: 1.7;
+      word-break: break-word;
     }
 
     @media (max-width: 900px) {
@@ -408,6 +479,15 @@
 
       .images-wrap {
         grid-template-columns: 1fr;
+      }
+
+      .modal-card {
+        width: 98vw;
+        padding: 16px;
+      }
+
+      .modal-header h2 {
+        font-size: 22px;
       }
     }
   </style>
@@ -510,6 +590,13 @@
   <div class="lightbox" id="lightbox">
     <div class="lightbox-close" id="lightboxClose">&times;</div>
     <img id="lightboxImage" alt="Expanded image" />
+  </div>
+
+  <div class="modal-overlay" id="issueModal">
+    <div class="modal-card" id="issueModalCard">
+      <div class="modal-close" id="issueModalClose">&times;</div>
+      <div id="issueModalContent"></div>
+    </div>
   </div>
 
   <script>
@@ -710,10 +797,12 @@
             </div>
 
             <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
-            <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
+            <div class="description compact">${escapeHtml(item.description || "No description provided.")}</div>
 
-            ${issueImagesHtml}
-            ${issueAttachmentsHtml}
+            <div class="issue-actions">
+              <button class="action-btn" onclick="openIssueModal(${findItemIndex(item.number)})">View Details</button>
+            </div>
+
             ${commentsHtml}
 
             <div class="issue-footer">
@@ -723,6 +812,117 @@
           </div>
         `;
       }).join("");
+    }
+
+    function findItemIndex(issueNumber) {
+      return allItems.findIndex(item => item.number === issueNumber);
+    }
+
+    function openIssueModal(index) {
+      const item = allItems[index];
+      if (!item) return;
+
+      const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
+
+      const issueImagesHtml = item.images && item.images.length ? `
+        <div class="modal-section">
+          <h3>Images</h3>
+          <div class="images-wrap">
+            ${item.images.map(src => `
+              <img src="${escapeAttribute(src)}" alt="Issue image" onclick="openLightbox('${escapeJs(src)}')" />
+            `).join("")}
+          </div>
+        </div>
+      ` : '';
+
+      const issueAttachmentsHtml = item.attachments && item.attachments.length ? `
+        <div class="modal-section">
+          <h3>Attachments</h3>
+          <div class="attachment-list">
+            ${item.attachments.map(file => `
+              <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
+                ${escapeHtml(file.name || "Attachment")}
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      ` : '';
+
+      const commentsHtml = item.comments && item.comments.length ? `
+        <div class="modal-section">
+          <h3>Recent Updates</h3>
+          ${item.comments.map(comment => `
+            <div class="comment">
+              <div class="comment-meta">
+                ${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}
+              </div>
+              <div class="comment-body">${escapeHtml(comment.body || "")}</div>
+
+              ${
+                comment.images && comment.images.length
+                  ? `
+                    <div class="comment-images">
+                      <h5>Images</h5>
+                      <div class="images-wrap">
+                        ${comment.images.map(src => `
+                          <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
+                        `).join("")}
+                      </div>
+                    </div>
+                  `
+                  : ""
+              }
+
+              ${
+                comment.attachments && comment.attachments.length
+                  ? `
+                    <div class="comment-attachments">
+                      <h5>Attachments</h5>
+                      <div class="attachment-list">
+                        ${comment.attachments.map(file => `
+                          <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
+                            ${escapeHtml(file.name || "Attachment")}
+                          </a>
+                        `).join("")}
+                      </div>
+                    </div>
+                  `
+                  : ""
+              }
+            </div>
+          `).join("")}
+        </div>
+      ` : '';
+
+      document.getElementById("issueModalContent").innerHTML = `
+        <div class="modal-header">
+          <h2>${escapeHtml(item.title)}</h2>
+          <div class="badges">
+            <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
+            <span class="badge badge-status">${escapeHtml(item.status)}</span>
+            <span class="badge badge-status">#${item.number}</span>
+          </div>
+          <div class="meta" style="margin-top:10px;">
+            Updated: ${escapeHtml(item.updated || "-")} • Comments: ${item.commentCount || 0} • Last comment: ${escapeHtml(item.lastCommentAt || "None")}
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h3>Description</h3>
+          <div class="modal-description">${escapeHtml(item.description || "No description provided.")}</div>
+        </div>
+
+        ${issueImagesHtml}
+        ${issueAttachmentsHtml}
+        ${commentsHtml}
+      `;
+
+      document.getElementById("issueModal").classList.add("open");
+    }
+
+    function closeIssueModal() {
+      document.getElementById("issueModal").classList.remove("open");
+      document.getElementById("issueModalContent").innerHTML = "";
     }
 
     function toggleComments(id, button, count) {
@@ -770,8 +970,14 @@
     document.getElementById("statusFilter").addEventListener("change", renderItems);
     document.getElementById("sortFilter").addEventListener("change", renderItems);
     document.getElementById("searchBox").addEventListener("input", renderItems);
+
     document.getElementById("lightbox").addEventListener("click", closeLightbox);
     document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+
+    document.getElementById("issueModal").addEventListener("click", function(e) {
+      if (e.target.id === "issueModal") closeIssueModal();
+    });
+    document.getElementById("issueModalClose").addEventListener("click", closeIssueModal);
 
     loadStatus();
   </script>
