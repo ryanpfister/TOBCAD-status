@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:44:37Z"
+    "checkedAt": "2026-04-22T15:45:39Z"
   },
-  "generatedAt": "2026-04-22T15:44:37.316Z",
+  "generatedAt": "2026-04-22T15:45:40.011Z",
   "items": [
     {
       "number": 39,
@@ -164,8 +164,8 @@
       "number": 28,
       "title": "Change Titles of Status Blocks",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Reporter: Ryan Pfister\n\nDate & Time: N/A\n\nDescription:\nThe buttons at the top currently show\n\"ON SCENE\" as 10-23, it should be 10-36\n\"AVAILABLE\" as 10-8, it should be 10-27\n\nWhere did this occur?\nOfficer Page\n\nSteps to Reproduce:\nSee Comments\n\nExpected Behavior:/\nOfficer Page\n\nActual Behavior::\nN?A\n\nSeverity:\nMedium (affects workflow)\n\nFrequency:\nAlways\n\nDevice Type:\nDesktop\n\nBrower / App:\nChrome\n\nError Messages:\n\n\nAdditional Notes:\n\n\nScreenshots:",
       "images": [],
