@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:27:20Z"
+    "checkedAt": "2026-04-22T17:32:18Z"
   },
-  "generatedAt": "2026-04-22T17:27:20.805Z",
+  "generatedAt": "2026-04-22T17:32:18.416Z",
   "items": [
     {
       "number": 47,
@@ -42,6 +42,22 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T17:32:09Z",
+          "updatedShort": "2026-04-22",
+          "body": "Delete user: Now soft-deletes (sets account inactive) instead of hard-deleting, which was crashing with 500 because the user is referenced in events, notes, assignments, and other tables. The account disappears from the active user list but historical records stay intact.\n\nEvent type dropdown: Removed the isActive filter — the dropdown now shows all event types. The filter was causing the dropdown to appear empty when the current event's type was flagged inactive, or when the load was still in-flight.\n\nPrint dispatch log: PRINT LOG button in the top-right of the log panel opens a formatted pri...",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T17:32:06Z",
+          "updatedShort": "2026-04-22",
+          "body": "LOG button in the top bar (dispatcher view only) — click to open the full-screen log panel, click again to return to the normal view\n\nAuto-logged entries for every dispatcher action:\n\nCall created — CC #XXXX CREATED — [type] at [location]\nCall closed — CC #XXXX CLOSED\nUnit dispatched to a call — STA21 DISPATCHED TO CC #XXXX\nUnit cleared from a call — STA21 CLEARED FROM CC #XXXX\nStatus changes — STA21: AV → DP — CC #XXXX\nCheck-ins / sign-offs — STA21 CHECKED IN (Vehicle: 123)\nManual entries — free-text input at the bottom of the log panel for DMV runs, phone calls, shift notes, etc.\n\nColor codi...",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T17:10:51Z",
           "updatedShort": "2026-04-22",
           "body": "When attempting to delete a user you get this error:\nFailed to load resource: the server responded with a status of 500 (Internal Server Error)",
@@ -57,7 +73,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 2,
+      "commentCount": 4,
       "lastCommentAt": "2026-04-22"
     },
     {
