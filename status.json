@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:03:44Z"
+    "checkedAt": "2026-04-22T15:05:19Z"
   },
-  "generatedAt": "2026-04-22T15:03:45.390Z",
+  "generatedAt": "2026-04-22T15:05:21.696Z",
   "items": [
     {
       "number": 34,
@@ -192,6 +192,14 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T15:05:08Z",
+          "updatedShort": "2026-04-22",
+          "body": "The DispatchPage already has a split-pane layout — the OfficerPage uses tabs and has no equivalent. The fix is to add a SPLIT option to the OfficerPage tab bar that shows events and units simultaneously. Simple one-file change.",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T15:03:34Z",
           "updatedShort": "2026-04-22",
           "body": "Issue completed",
@@ -207,7 +215,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 2,
+      "commentCount": 3,
       "lastCommentAt": "2026-04-22"
     },
     {
