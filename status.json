@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:50:02Z"
+    "checkedAt": "2026-04-22T14:52:30Z"
   },
-  "generatedAt": "2026-04-22T14:50:02.933Z",
+  "generatedAt": "2026-04-22T14:52:31.051Z",
   "items": [
     {
       "number": 31,
@@ -166,37 +166,6 @@
       "lastCommentAt": null
     },
     {
-      "number": 17,
-      "title": "Multiple Units",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "If multiple units are signed in as the same callsign (for example 2 201's) dont allow it, allow the officer who is signing in to kick the other 201 off, but give them an option in case they forgot to sign out.\n\nAlso sometimes we have two units riding in 1 car, allow this to happen as well.",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T14:49:53Z",
-          "updatedShort": "2026-04-22",
-          "body": "Should be fixed in commit brookhaven-cad-system-NK6yM",
-          "images": [],
-          "attachments": []
-        },
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T14:45:58Z",
-          "updatedShort": "2026-04-22",
-          "body": "Currently in progress",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 2,
-      "lastCommentAt": "2026-04-22"
-    },
-    {
       "number": 21,
       "title": "None",
       "type": "bug",
@@ -242,6 +211,45 @@
       "comments": [],
       "commentCount": 0,
       "lastCommentAt": null
+    },
+    {
+      "number": 17,
+      "title": "Multiple Units",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "If multiple units are signed in as the same callsign (for example 2 201's) dont allow it, allow the officer who is signing in to kick the other 201 off, but give them an option in case they forgot to sign out.\n\nAlso sometimes we have two units riding in 1 car, allow this to happen as well.",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:52:19Z",
+          "updatedShort": "2026-04-22",
+          "body": "Change has been completed, see screenshot \n\n<img width=\"845\" height=\"502\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/456c93ce-9352-4d4a-9e0f-00bb99a3c17b\" />",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:49:53Z",
+          "updatedShort": "2026-04-22",
+          "body": "Should be fixed in commit brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:45:58Z",
+          "updatedShort": "2026-04-22",
+          "body": "Currently in progress",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 3,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 16,
