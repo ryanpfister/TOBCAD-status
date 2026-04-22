@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:56:23Z"
+    "checkedAt": "2026-04-22T16:57:24Z"
   },
-  "generatedAt": "2026-04-22T16:56:23.209Z",
+  "generatedAt": "2026-04-22T16:57:27.132Z",
   "items": [
     {
       "number": 46,
@@ -66,8 +66,8 @@
       "number": 41,
       "title": "[BUG]: Unexpected Token",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "After creating a call, could close or change the status. Showed the message \"Unexpected token '<'\"<html>,h\"... is not valid JSON\"",
       "images": [],
