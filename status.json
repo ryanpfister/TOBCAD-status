@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:00:39Z"
+    "checkedAt": "2026-04-22T15:00:57Z"
   },
-  "generatedAt": "2026-04-22T15:00:39.354Z",
+  "generatedAt": "2026-04-22T15:00:57.952Z",
   "items": [
     {
       "number": 34,
@@ -189,9 +189,18 @@
       "description": "Reporter: J. Garcia\n\nDate & Time: N/A\n\nDescription:\nHamlet not showing under location on unit monitor. Perhaps the common name should too?\n\nWhere did this occur?\nMain Page\n\nSteps to Reproduce:\nN/A\n\nExpected Behavior:/\nMain Page\n\nActual Behavior::\nN/A\n\nSeverity:\nMedium (affects workflow)\n\nFrequency:\nAlways\n\nDevice Type:\nDesktop\n\nBrower / App:\nChrome\n\nError Messages:\n\n\nAdditional Notes:\n\n\nScreenshots:",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:00:49Z",
+          "updatedShort": "2026-04-22",
+          "body": "In progress see commit origin/claude/brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 21,
