@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:04:14Z"
+    "checkedAt": "2026-04-22T16:11:02Z"
   },
-  "generatedAt": "2026-04-22T16:04:14.263Z",
+  "generatedAt": "2026-04-22T16:11:03.283Z",
   "items": [
     {
       "number": 44,
@@ -156,9 +156,18 @@
       "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nProcess of rejecting memo books\n\n### Summary\n\nWhen a supervisor rejects a memo book, email the user, then put it back in their queue and allow them to fix it. Then allow them to resubmit the memo book for approval.\n\n### What problem would this solve?\n\nMemo book rejection\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nNotifications\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and thi...",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:10:52Z",
+          "updatedShort": "2026-04-22",
+          "body": "When a supervisor rejects a memo:\n\nPOST /memo/:tourId/reject now emails the officer with the rejection note and a prompt to log in and fix it (sendMemoRejected)\nThe memo returns to the officer's queue as memoStatus = 'rejected'\nOfficer correction flow:\n\nOn any subsequent login (with or without an active tour), the memo panel loads GET /memo/my-rejected alongside the active/incomplete books\nA red \"✕ REJECTED MEMO\" banner appears at the top of the panel with the tour date and a FIX button\nIf there's no active tour at all (officer hasn't checked in), the same info appears on the \"no active tour\" ...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 32,
