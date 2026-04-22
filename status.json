@@ -2,8 +2,342 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:28:52Z"
+    "checkedAt": "2026-04-22T14:30:43Z"
   },
-  "generatedAt": "2026-04-22T14:28:52.617Z",
-  "items": []
+  "generatedAt": "2026-04-22T14:30:43.379Z",
+  "items": [
+    {
+      "number": 30,
+      "title": "Feature: Allow admins to reset user password from the admin panel",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Requestor: Ryan Pfister Summary: Allow admins and supervisors to request a reset password to a users assigned email from the admin panel. Also when creating a user for the first time, allow the creator to send a temporary password to the user to log into for the first time, then have them change it. Problem to Solve: Password Issues Workflow / Use Case: Alternate Ideas:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 29,
+      "title": "When going to light mode certain things dont show",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Reporter: Ryan Pfister Date &amp; Time: N/A Description: When you enter light mode the unavailable button no longer shows. Where did this occur? N/A Steps to Reproduce: N/A Expected Behavior:/ N/A Actual Behavior:: Button doesnt show Severity: Low (minor inconvenience) Frequency: Always Device Type: Desktop Brower / App: Chrome Error Messages: Additional Notes: Screenshots: [{\"name\":\"Screenshot 2025-06-03 121443_anonymous.png\",\"link\":\"https://brookhavenny-my.sharepoint.com/personal/rpfister_brookhavenny_gov/Documents/Apps/Microsoft%20Forms/CAD%20System%20Bug%20Report/Question/Screenshot%202025-06-03%20121443_anonymous.png\",\"id\":\"013MO5WYEWEZIKRJWL5JHJESOSNA2XWJBI\",\"type\":null,\"size\":142547,\"referenceId\":\"013MO5WYAWSEQRGNZDCZBZVPX7XI2ZQC56\",\"driveId\":\"b!LjlRis3pRUKb1IQ3ijnU6pKWGJIDRORAso3e-l3uOPbVmvw2VvbgSotfJ0hi-UUW\",\"status\":1,\"uploadSessionUrl\":null,\"badgerToken\":null}]",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:28:42Z",
+          "updatedShort": "2026-04-22",
+          "body": "See photos",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 28,
+      "title": "Change Titles of Status Blocks",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Reporter: Ryan Pfister Date &amp; Time: N/A Description: The buttons at the top currently show \"ON SCENE\" as 10-23, it should be 10-36 \"AVAILABLE\" as 10-8, it should be 10-27 Where did this occur? Officer Page Steps to Reproduce: See Comments Expected Behavior:/ Officer Page Actual Behavior:: N?A Severity: Medium (affects workflow) Frequency: Always Device Type: Desktop Brower / App: Chrome Error Messages: Additional Notes: Screenshots: [{\"name\":\"Screenshot 2026-04-22 102454_anonymous.png\",\"link\":\"https://brookhavenny-my.sharepoint.com/personal/rpfister_brookhavenny_gov/Documents/Apps/Microsoft%20Forms/CAD%20System%20Bug%20Report/Question/Screenshot%202026-04-22%20102454_anonymous.png\",\"id\":\"013MO5WYGREDCRJPWK2NCL3XV6UEHFAVYY\",\"type\":null,\"size\":24011,\"referenceId\":\"013MO5WYAWSEQRGNZDCZBZVPX7XI2ZQC56\",\"driveId\":\"b!LjlRis3pRUKb1IQ3ijnU6pKWGJIDRORAso3e-l3uOPbVmvw2VvbgSotfJ0hi-UUW\",\"status\":1,\"uploadSessionUrl\":null,\"badgerToken\":null}]",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 27,
+      "title": "Feature: Update Audit Logs",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Requestor: Ryan Pfister Summary: Update audit logs to log all new features added Problem to Solve: Increased Security Workflow / Use Case: Alternate Ideas:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 25,
+      "title": "Feature: Plot Map",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Requestor: J. Garcia Summary: Able to plot call locations on the map and create a route to it? Problem to Solve: More map featues Workflow / Use Case: Alternate Ideas:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 24,
+      "title": "Feature: Officer / General View event from unit monitor",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Requestor: J. Garcia Summary: Allow accounts to click on the event from the unit monitor to get details about it, not just from the event monitor. Problem to Solve: Allow users to easily view events. Workflow / Use Case: Alternate Ideas:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 23,
+      "title": "Feature: Make a tab to view both the event and unit monitor side by side.",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Requestor: J. Garcia Summary: I want a view to see both pages side by side Problem to Solve: Allow units to see both. Workflow / Use Case: Alternate Ideas:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 22,
+      "title": "Hamlet not showing under location on unit monitor. Perhaps the common name should too?",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Reporter: J. Garcia Date &amp; Time: N/A Description: Hamlet not showing under location on unit monitor. Perhaps the common name should too? Where did this occur? Main Page Steps to Reproduce: N/A Expected Behavior:/ Main Page Actual Behavior:: N/A Severity: Medium (affects workflow) Frequency: Always Device Type: Desktop Brower / App: Chrome Error Messages: Additional Notes: Screenshots:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 18,
+      "title": "Memo Print",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "When printing the memo book, the officer name should be displayed on the print out",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 17,
+      "title": "Multiple Units",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "If multiple units are signed in as the same callsign (for example 2 201's) dont allow it, allow the officer who is signing in to kick the other 201 off, but give them an option in case they forgot to sign out. Also sometimes we have two units riding in 1 car, allow this to happen as well.",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 15,
+      "title": "Add Email Server",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Add email server for email reports, daily reports, new users creations, password reset, send a email to the user when the account is first created to setup a password, etc.",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:15:20Z",
+          "updatedShort": "2026-04-22",
+          "body": "Currently working on this",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 21,
+      "title": "None",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Reporter: Testing Cad System Bug Report Date &amp; Time: None Description: None Where did this occur? None Steps to Reproduce: None Expected Behavior:/ None Actual Behavior:: None Severity: Low (minor inconvenience) Frequency: Sometimes Device Type: Desktop Brower / App: None Error Messages: Additional Notes: Screenshots:",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 20,
+      "title": "Feature: test feature",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Requestor: test Summary: I wnat new featuees Problem to Solve: None Workflow / Use Case: me Alternate Ideas: none",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 19,
+      "title": "Testing",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Reporter: Ryan Pfister Date &amp; Time: 4/22/26 8:41 AM Description: testing 12345 Where did this occur? Testing Steps to Reproduce: Testing Expected Behavior:/ Testing Actual Behavior:: test Severity: Critical (system unusable) Frequency: Sometimes Device Type: Mobile Brower / App: Chrome Error Messages: test Additional Notes: test Screenshots: [{\"name\":\"IMG_6249_anonymous.jpeg\",\"link\":\"https://brookhavenny-my.sharepoint.com/personal/rpfister_brookhavenny_gov/Documents/Apps/Microsoft%20Forms/CAD%20System%20Bug%20Report/Question/IMG_6249_anonymous.jpeg\",\"id\":\"013MO5WYCQNZYJNRTIFVD3T6PCHEBSHYKX\",\"type\":null,\"size\":4497113,\"referenceId\":\"013MO5WYAWSEQRGNZDCZBZVPX7XI2ZQC56\",\"driveId\":\"b!LjlRis3pRUKb1IQ3ijnU6pKWGJIDRORAso3e-l3uOPbVmvw2VvbgSotfJ0hi-UUW\",\"status\":1,\"uploadSessionUrl\":null,\"badgerToken\":null}]",
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 16,
+      "title": "Force Unit Signoff - Memo Book",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "If we force a unit to sign off, and they dont complete their memo book, make it so that a supervisor knows its incomplete in the review tab, and allow the officer to complete it next time they sign in.",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:01:02Z",
+          "updatedShort": "2026-04-22",
+          "body": "This issue has been completed",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 13,
+      "title": "Audit log showing 127.0.0.1",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Also we need to update the audit logs to update with all the new stuff we added. As well as the ip of the user in the audit log is localhost (127.0.0.1)",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:00:36Z",
+          "updatedShort": "2026-04-22",
+          "body": "Issue has been fixe",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 12,
+      "title": "Memo book force logoff",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "If we force a unit to sign off, and they dont complete their memo book, make it so that a supervisor knows its incomplete in the review tab, and allow the officer to complete it next time they sign in.",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:01:15Z",
+          "updatedShort": "2026-04-22",
+          "body": "This issue has been completed / fixed.",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 10,
+      "title": "Needs assistance",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "If someone's status is changed to \"need assistance (10-1), maybe an alert tone to all units and dispatch",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:49:33Z",
+          "updatedShort": "2026-04-22",
+          "body": "No comment text.",
+          "images": [
+            "https://private-user-images.githubusercontent.com/57775823/582025212-fcda5071-478c-41d0-9056-d143ad906f9e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzY4Njg1NDMsIm5iZiI6MTc3Njg2ODI0MywicGF0aCI6Ii81Nzc3NTgyMy81ODIwMjUyMTItZmNkYTUwNzEtNDc4Yy00MWQwLTkwNTYtZDE0M2FkOTA2ZjllLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA0MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNDIyVDE0MzA0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEzYjI3Y2JiNDRlNTM1OTc2YjU5YjJhYzM0ZmJhYTQxYzhlZDEyZGNlNzI4YzBlYjE0OTQ3NWJjMzk5ZjcxZGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.ULOWNUmguoazN0ET0u0hHdw4Ikfvjpyv8CImmQcCaxA"
+          ]
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:48:08Z",
+          "updatedShort": "2026-04-22",
+          "body": "This should be implemented see commit origin/claude/brookhaven-cad-system-NK6yM",
+          "images": []
+        }
+      ],
+      "commentCount": 2,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 9,
+      "title": "Pop up notification",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Pop up notification with sound for assigned calls to any officer assigned",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:44:18Z",
+          "updatedShort": "2026-04-22",
+          "body": "This issue has been fixed / implemented.",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 8,
+      "title": "Create noted with status's",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "General - Add the ability to create notes with statuses, mainly when not assigned to a call, so if someone says they are on a personal or taking a 12 (return to town hall) per 104, you can put \"PER 104\" and its visible on the unit monitor.",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T13:20:22Z",
+          "updatedShort": "2026-04-22",
+          "body": "This has been complete with commit claude/brookhaven-cad-system-NK6yM",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 7,
+      "title": "Change Status",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "General- Change statuses to Available (green), assigned or dispatched (yellow), enroute (blue), on scene (orange), unavailable (white), 10-18 (meal) (teal), 10-12 (returning to town hall) (brown), out of service (purple), and needs assistance (red)",
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T12:57:20Z",
+          "updatedShort": "2026-04-22",
+          "body": "This has been added to the project. The commit brookhaven-cad-system-NK6yM solved this issue",
+          "images": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    }
+  ]
 }
