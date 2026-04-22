@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:54:17Z"
+    "checkedAt": "2026-04-22T15:55:43Z"
   },
-  "generatedAt": "2026-04-22T15:54:17.158Z",
+  "generatedAt": "2026-04-22T15:55:44.421Z",
   "items": [
+    {
+      "number": 44,
+      "title": "Allow users to delete user accounts",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Allow admins to delete user accounts of lower permission then them from admin panel.",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 43,
       "title": "Monitor View",
