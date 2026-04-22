@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:20:09Z"
+    "checkedAt": "2026-04-22T16:24:48Z"
   },
-  "generatedAt": "2026-04-22T16:20:11.759Z",
+  "generatedAt": "2026-04-22T16:24:50.326Z",
   "items": [
     {
       "number": 44,
@@ -128,9 +128,18 @@
       "description": "### Requester Name / Unit\n\nJ. Garcai\n\n### Feature Title\n\nChange Font Size\n\n### Summary\n\nAllow users to change font size, maybe a preferences page to allow users to change UI settings such as font size, color scheme, day / night mode?\n\n### What problem would this solve?\n\nUI issues\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and this request is not a duplicate",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:24:39Z",
+          "updatedShort": "2026-04-22",
+          "body": "Preferences modal — accessible via the ⚙ PREFS button in the top-right (replaces the old ☀ button):\n\nTheme: Dark / Light toggle (same behavior as before, now lives in the panel)\nFont Size: Small (14px) / Normal (16px) / Large (18px) / X-Large (20px) — changes the html root font-size so all Tailwind rem-based text classes (text-xs, text-sm, etc.) scale proportionally without touching a single component\nAccent Color: Four terminal palettes — Green (default), Amber, Cyan, Ghost — each with separate dark-mode and light-mode variants so the colors remain readable in both themes. Only the structural...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 34,
