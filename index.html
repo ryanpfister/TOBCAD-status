@@ -5,69 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TOBCAD Status</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f6f8;
       color: #1f2937;
     }
-
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 32px 20px;
     }
-
-    .header {
-      margin-bottom: 24px;
-    }
-
-    .header h1 {
-      margin: 0 0 8px 0;
-      font-size: 32px;
-    }
-
-    .header p {
-      margin: 0;
-      color: #6b7280;
-    }
-
+    .header h1 { margin: 0 0 8px 0; font-size: 32px; }
+    .header p { margin: 0; color: #6b7280; }
     .summary {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
       margin: 24px 0 32px 0;
     }
-
     .card {
       background: white;
       border-radius: 14px;
       padding: 18px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-
-    .card h2 {
-      margin: 0 0 8px 0;
-      font-size: 16px;
-      color: #6b7280;
-    }
-
-    .card .value {
-      font-size: 28px;
-      font-weight: bold;
-    }
-
+    .card h2 { margin: 0 0 8px 0; font-size: 16px; color: #6b7280; }
+    .card .value { font-size: 28px; font-weight: bold; }
     .controls {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 20px;
     }
-
     .controls select {
       padding: 10px 12px;
       border: 1px solid #d1d5db;
@@ -75,17 +46,8 @@
       background: white;
       font-size: 14px;
     }
-
-    .section-title {
-      margin: 24px 0 14px 0;
-      font-size: 22px;
-    }
-
-    .issue-list {
-      display: grid;
-      gap: 16px;
-    }
-
+    .section-title { margin: 24px 0 14px 0; font-size: 22px; }
+    .issue-list { display: grid; gap: 16px; }
     .issue {
       background: white;
       border-radius: 14px;
@@ -93,27 +55,11 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       border-left: 6px solid #d1d5db;
     }
-
-    .issue.open {
-      border-left-color: #2563eb;
-    }
-
-    .issue.in-progress {
-      border-left-color: #f59e0b;
-    }
-
-    .issue.planned {
-      border-left-color: #8b5cf6;
-    }
-
-    .issue.completed {
-      border-left-color: #10b981;
-    }
-
-    .issue.closed {
-      border-left-color: #6b7280;
-    }
-
+    .issue.open { border-left-color: #2563eb; }
+    .issue.in-progress { border-left-color: #f59e0b; }
+    .issue.planned { border-left-color: #8b5cf6; }
+    .issue.completed { border-left-color: #10b981; }
+    .issue.closed { border-left-color: #6b7280; }
     .top-row {
       display: flex;
       flex-wrap: wrap;
@@ -122,61 +68,19 @@
       gap: 10px;
       margin-bottom: 10px;
     }
-
-    .issue h3 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .badges {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
+    .issue h3 { margin: 0; font-size: 20px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
     .badge {
       padding: 6px 10px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: bold;
     }
-
-    .badge-type-bug {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .badge-type-feature {
-      background: #dbeafe;
-      color: #1d4ed8;
-    }
-
-    .badge-status {
-      background: #e5e7eb;
-      color: #374151;
-    }
-
-    .meta {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      line-height: 1.5;
-      margin-bottom: 14px;
-    }
-
-    .link-row a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .link-row a:hover {
-      text-decoration: underline;
-    }
-
+    .badge-type-bug { background: #fee2e2; color: #b91c1c; }
+    .badge-type-feature { background: #dbeafe; color: #1d4ed8; }
+    .badge-status { background: #e5e7eb; color: #374151; }
+    .meta { color: #6b7280; font-size: 14px; margin-bottom: 10px; }
+    .description { line-height: 1.5; margin-bottom: 14px; }
     .empty {
       background: white;
       padding: 24px;
@@ -185,22 +89,11 @@
       color: #6b7280;
       text-align: center;
     }
-
     .footer {
       margin-top: 32px;
       color: #6b7280;
       font-size: 14px;
       text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .header h1 {
-        font-size: 26px;
-      }
-
-      .issue h3 {
-        font-size: 18px;
-      }
     }
   </style>
 </head>
@@ -208,7 +101,7 @@
   <div class="container">
     <div class="header">
       <h1>TOBCAD Status</h1>
-      <p>Public status page for reported issues, feature requests, and suggestions.</p>
+      <p>Public status page for bugs, feature requests, and suggestions.</p>
     </div>
 
     <div class="summary">
@@ -250,9 +143,7 @@
     <h2 class="section-title">Current Items</h2>
     <div id="issueList" class="issue-list"></div>
 
-    <div class="footer">
-      TOBCAD public status page
-    </div>
+    <div class="footer">TOBCAD public status page</div>
   </div>
 
   <script>
@@ -261,39 +152,25 @@
     async function loadStatus() {
       try {
         const response = await fetch("./status.json?v=" + Date.now());
-        if (!response.ok) {
-          throw new Error("Could not load status.json");
-        }
-
+        if (!response.ok) throw new Error("Could not load status.json");
         allItems = await response.json();
         renderSummary(allItems);
         renderItems();
       } catch (error) {
-        document.getElementById("issueList").innerHTML = `
-          <div class="empty">Failed to load status data.</div>
-        `;
+        document.getElementById("issueList").innerHTML =
+          '<div class="empty">Failed to load status data.</div>';
         console.error(error);
       }
     }
 
     function renderSummary(items) {
-      const total = items.length;
-      const active = items.filter(item =>
-        ["Open", "In Progress", "Planned"].includes(item.status)
-      ).length;
-      const completed = items.filter(item =>
-        item.status === "Completed"
-      ).length;
+      document.getElementById("totalCount").textContent = items.length;
+      document.getElementById("activeCount").textContent =
+        items.filter(i => ["Open", "In Progress", "Planned"].includes(i.status)).length;
+      document.getElementById("completedCount").textContent =
+        items.filter(i => i.status === "Completed").length;
 
-      const dates = items
-        .map(item => item.updated)
-        .filter(Boolean)
-        .sort()
-        .reverse();
-
-      document.getElementById("totalCount").textContent = total;
-      document.getElementById("activeCount").textContent = active;
-      document.getElementById("completedCount").textContent = completed;
+      const dates = items.map(i => i.updated).filter(Boolean).sort().reverse();
       document.getElementById("lastUpdated").textContent = dates[0] || "-";
     }
 
@@ -302,28 +179,20 @@
       const statusFilter = document.getElementById("statusFilter").value;
 
       let filtered = [...allItems];
-
-      if (typeFilter !== "all") {
-        filtered = filtered.filter(item => item.type === typeFilter);
-      }
-
-      if (statusFilter !== "all") {
-        filtered = filtered.filter(item => item.status === statusFilter);
-      }
+      if (typeFilter !== "all") filtered = filtered.filter(i => i.type === typeFilter);
+      if (statusFilter !== "all") filtered = filtered.filter(i => i.status === statusFilter);
 
       filtered.sort((a, b) => new Date(b.updated) - new Date(a.updated));
 
       const container = document.getElementById("issueList");
-
-      if (filtered.length === 0) {
-        container.innerHTML = `<div class="empty">No matching items found.</div>`;
+      if (!filtered.length) {
+        container.innerHTML = '<div class="empty">No matching items found.</div>';
         return;
       }
 
       container.innerHTML = filtered.map(item => {
         const statusClass = item.status.toLowerCase().replace(/\s+/g, "-");
         const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
-
         return `
           <div class="issue ${statusClass}">
             <div class="top-row">
@@ -333,20 +202,8 @@
                 <span class="badge badge-status">${escapeHtml(item.status)}</span>
               </div>
             </div>
-
-            <div class="meta">
-              Updated: ${escapeHtml(item.updated || "-")}
-            </div>
-
-            <div class="description">
-              ${escapeHtml(item.description || "No description provided.")}
-            </div>
-
-            ${
-              item.link
-                ? `<div class="link-row"><a href="${item.link}" target="_blank" rel="noopener noreferrer">View on GitHub</a></div>`
-                : ""
-            }
+            <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
+            <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
           </div>
         `;
       }).join("");
@@ -354,7 +211,7 @@
 
     function escapeHtml(text) {
       const div = document.createElement("div");
-      div.textContent = text;
+      div.textContent = text || "";
       return div.innerHTML;
     }
 
