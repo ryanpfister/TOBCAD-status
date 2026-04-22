@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:59:31Z"
+    "checkedAt": "2026-04-22T16:59:43Z"
   },
-  "generatedAt": "2026-04-22T16:59:31.227Z",
+  "generatedAt": "2026-04-22T16:59:43.666Z",
   "items": [
     {
       "number": 47,
@@ -16,9 +16,18 @@
       "description": "After an event is created, if you want to switch the event type, the event list disappears in the drop box",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:59:32Z",
+          "updatedShort": "2026-04-22",
+          "body": "In edit mode, the CC number at the top of the event detail becomes an amber-bordered input field — type the correction, hit SAVE, done\nServer checks the new number isn't already used by a different event and returns a clear \"already in use\" error if so; the value is auto-uppercased before saving\nThe number remains read-only when not editing, same as before",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 46,
