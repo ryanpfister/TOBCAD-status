@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:05:19Z"
+    "checkedAt": "2026-04-22T15:06:17Z"
   },
-  "generatedAt": "2026-04-22T15:05:21.696Z",
+  "generatedAt": "2026-04-22T15:06:18.438Z",
   "items": [
     {
       "number": 34,
@@ -175,9 +175,18 @@
       "description": "Requestor: J. Garcia\n\nSummary:\nI want a view to see both pages side by side\n\nProblem to Solve:\nAllow units to see both.\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:06:07Z",
+          "updatedShort": "2026-04-22",
+          "body": "Commit claude/brookhaven-cad-system-NK6yM should fix this issue.\n\nThe DispatchPage already has a split-pane layout — the OfficerPage uses tabs and has no equivalent. The fix is to add a SPLIT option to the OfficerPage tab bar that shows events and units simultaneously. Simple one-file change.\n\nDone. A SPLIT tab now appears in the officer page tab bar between UNITS and MAP. Clicking it shows the event board on the left half and the unit board on the right half simultaneously — the same layout the dispatch page uses. Clicking any other tab returns to single-pane view.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 22,
