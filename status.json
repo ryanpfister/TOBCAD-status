@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:47:19Z"
+    "checkedAt": "2026-04-22T15:49:28Z"
   },
-  "generatedAt": "2026-04-22T15:47:20.437Z",
+  "generatedAt": "2026-04-22T15:49:30.393Z",
   "items": [
+    {
+      "number": 40,
+      "title": "CC on call box info and monitors",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Common name not showing on information box for CC or either event or unit monitor",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 39,
       "title": "[BUG]: On map the icon on the map isnt showing the text / its getting cut off",
