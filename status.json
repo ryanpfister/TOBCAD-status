@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:08:14Z"
+    "checkedAt": "2026-04-22T17:08:35Z"
   },
-  "generatedAt": "2026-04-22T17:08:15.216Z",
+  "generatedAt": "2026-04-22T17:08:36.219Z",
   "items": [
     {
       "number": 47,
@@ -32,7 +32,7 @@
     {
       "number": 46,
       "title": "[FEATURE]: Dispatch log",
-      "type": "bug",
+      "type": "feature",
       "status": "Open",
       "isCompleted": false,
       "updated": "2026-04-22",
