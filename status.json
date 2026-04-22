@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:54:24Z"
+    "checkedAt": "2026-04-22T16:56:11Z"
   },
-  "generatedAt": "2026-04-22T16:54:25.739Z",
+  "generatedAt": "2026-04-22T16:56:14.210Z",
   "items": [
     {
       "number": 46,
@@ -72,9 +72,26 @@
       "description": "After creating a call, could close or change the status. Showed the message \"Unexpected token '<'\"<html>,h\"... is not valid JSON\"",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:56:09Z",
+          "updatedShort": "2026-04-22",
+          "body": "The root cause is that the server crashes (unhandled PostgreSQL error) and returns an HTML 500 page instead of JSON — then res.json() fails. This almost certainly started happening after the locationCommonName schema change because the migration hasn't been applied yet, so Drizzle tries to SELECT location_common_name but the column doesn't exist in the actual database.",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:56:03Z",
+          "updatedShort": "2026-04-22",
+          "body": "The \"not valid JSON\" error means the server returned an HTML page instead of JSON — almost always a crash that isn't caught, or a bad URL. Let me find where close/status-change is called and what the event ID looks like at that point.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 2,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 40,
