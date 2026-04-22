@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:12:53Z"
+    "checkedAt": "2026-04-22T15:14:23Z"
   },
-  "generatedAt": "2026-04-22T15:12:53.336Z",
+  "generatedAt": "2026-04-22T15:14:24.171Z",
   "items": [
     {
       "number": 34,
@@ -155,8 +155,8 @@
       "number": 24,
       "title": "Feature: Officer / General View event from unit monitor",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Requestor: J. Garcia\n\nSummary:\nAllow accounts to click on the event from the unit monitor to get details about it, not just from the event monitor.\n\nProblem to Solve:\nAllow users to easily view events.\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
