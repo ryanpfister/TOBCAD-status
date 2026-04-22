@@ -7,188 +7,240 @@
   <style>
     * { box-sizing: border-box; }
 
+    :root {
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --blue: #2563eb;
+      --blue-soft: #dbeafe;
+      --red: #dc2626;
+      --red-soft: #fee2e2;
+      --green: #059669;
+      --green-soft: #d1fae5;
+      --purple: #7c3aed;
+      --purple-soft: #ede9fe;
+      --amber: #d97706;
+      --amber-soft: #fef3c7;
+      --gray-soft: #f3f4f6;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #1f2937;
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 280px);
+      color: var(--text);
     }
 
     .container {
       width: 100%;
-      max-width: 100%;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 24px;
     }
 
-    .header h1 {
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb 55%, #3b82f6);
+      color: white;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
       margin: 0 0 8px 0;
-      font-size: 32px;
+      font-size: 34px;
     }
 
-    .header p {
+    .hero p {
       margin: 0;
-      color: #6b7280;
+      font-size: 16px;
+      max-width: 850px;
+      line-height: 1.6;
+      opacity: 0.95;
     }
 
-    .submit-section {
+    .notice {
+      margin-top: 16px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px;
+      padding: 14px 16px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .quick-actions {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
-      margin: 24px 0 32px 0;
+      gap: 18px;
+      margin-bottom: 22px;
     }
 
-    .submit-card,
-    .card,
-    .issue,
+    .action-card,
+    .metric-card,
+    .panel,
+    .issue-card,
     .empty {
-      background: white;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(15, 23, 42, 0.05);
     }
 
-    .submit-card h2 {
-      margin: 0 0 10px 0;
-      font-size: 20px;
+    .action-card {
+      padding: 22px;
     }
 
-    .submit-card p {
-      margin: 0 0 14px 0;
-      line-height: 1.5;
-      color: #4b5563;
+    .action-card h2 {
+      margin: 0 0 8px 0;
+      font-size: 22px;
     }
 
-    .submit-button {
+    .action-card p {
+      margin: 0 0 16px 0;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .action-btn {
       display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
       color: white;
+      font-size: 14px;
     }
 
-    .bug-button { background: #dc2626; }
-    .feature-button { background: #2563eb; }
+    .bug-btn { background: var(--red); }
+    .feature-btn { background: var(--blue); }
 
-    .notice {
-      margin-bottom: 28px;
-      line-height: 1.6;
-      color: #4b5563;
-      background: #fff;
-      border-left: 5px solid #f59e0b;
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .summary {
+    .metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
-      margin: 24px 0;
+      margin-bottom: 22px;
     }
 
-    .card h2 {
-      margin: 0 0 8px 0;
-      font-size: 16px;
-      color: #6b7280;
+    .metric-card {
+      padding: 18px;
     }
 
-    .card .value {
-      font-size: 28px;
+    .metric-label {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
       font-weight: bold;
     }
 
-    .server-online { color: #059669; }
-    .server-offline { color: #dc2626; }
-    .server-unknown { color: #6b7280; }
-
-    .server-meta {
-      margin-top: 8px;
-      font-size: 13px;
-      color: #6b7280;
-      line-height: 1.4;
+    .metric-value {
+      font-size: 30px;
+      font-weight: bold;
     }
 
-    .toolbar {
-      display: grid;
-      grid-template-columns: minmax(240px, 2fr) repeat(3, minmax(160px, 1fr));
-      gap: 12px;
+    .metric-sub {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .online { color: var(--green); }
+    .offline { color: var(--red); }
+    .unknown { color: var(--muted); }
+
+    .toolbar.panel {
+      padding: 16px;
       margin-bottom: 20px;
-      width: 100%;
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      backdrop-filter: blur(6px);
+    }
+
+    .toolbar-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 2fr) repeat(3, minmax(150px, 1fr));
+      gap: 12px;
     }
 
     .toolbar input,
     .toolbar select {
+      width: 100%;
       padding: 11px 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
       background: white;
       font-size: 14px;
-      width: 100%;
     }
 
-    .section-title {
-      margin: 24px 0 14px 0;
-      font-size: 22px;
+    .section {
+      margin-bottom: 26px;
     }
 
-    .subtext {
-      margin: -6px 0 16px 0;
-      color: #6b7280;
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
       font-size: 14px;
     }
 
     .issue-list {
       display: grid;
       gap: 16px;
-      width: 100%;
     }
 
-    .issue {
-      border-left: 6px solid #d1d5db;
-      width: 100%;
+    .issue-card {
+      padding: 18px;
+      border-left: 6px solid var(--border);
     }
 
-    .issue.open { border-left-color: #2563eb; }
-    .issue.in-progress { border-left-color: #f59e0b; }
-    .issue.planned { border-left-color: #8b5cf6; }
-    .issue.completed { border-left-color: #10b981; }
+    .issue-card.bug { border-left-color: var(--red); }
+    .issue-card.feature { border-left-color: var(--blue); }
+    .issue-card.completed { opacity: 0.95; }
 
-    .top-row {
+    .issue-top {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      gap: 12px;
+      flex-wrap: wrap;
       margin-bottom: 10px;
     }
 
-    .issue h3 {
-      margin: 0;
+    .issue-title-wrap h3 {
+      margin: 0 0 6px 0;
       font-size: 20px;
       word-break: break-word;
     }
 
-    .issue-title-line {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      max-width: 100%;
-    }
-
-    .issue-number {
-      color: #6b7280;
-      font-size: 14px;
-      font-weight: bold;
+    .issue-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
     }
 
     .badges {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
 
     .badge {
@@ -198,55 +250,170 @@
       font-weight: bold;
     }
 
-    .badge-type-bug {
-      background: #fee2e2;
-      color: #b91c1c;
+    .badge-bug {
+      background: var(--red-soft);
+      color: #991b1b;
     }
 
-    .badge-type-feature {
-      background: #dbeafe;
+    .badge-feature {
+      background: var(--blue-soft);
       color: #1d4ed8;
     }
 
-    .badge-status {
-      background: #e5e7eb;
+    .badge-open {
+      background: var(--blue-soft);
+      color: #1d4ed8;
+    }
+
+    .badge-progress {
+      background: var(--amber-soft);
+      color: #92400e;
+    }
+
+    .badge-planned {
+      background: var(--purple-soft);
+      color: #6d28d9;
+    }
+
+    .badge-completed {
+      background: var(--green-soft);
+      color: #047857;
+    }
+
+    .issue-preview {
       color: #374151;
-    }
-
-    .meta {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 10px;
-      word-break: break-word;
-    }
-
-    .description {
-      line-height: 1.6;
-      margin-bottom: 14px;
+      line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin: 10px 0 14px 0;
       white-space: pre-wrap;
       word-break: break-word;
     }
 
-    .description.compact {
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    .issue-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .attachments,
-    .image-grid,
-    .comment-attachments,
-    .comment-images {
-      margin-top: 12px;
+    .issue-stats {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .attachments h4,
-    .image-grid h4,
-    .comment-attachments h5,
-    .comment-images h5 {
-      margin: 0 0 8px 0;
+    .issue-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary {
+      border: none;
+      background: #eef2ff;
+      color: #3730a3;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--border);
+      background: white;
+      color: #374151;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .empty {
+      padding: 28px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
       font-size: 14px;
+      padding: 10px 0 24px 0;
+    }
+
+    .modal-overlay,
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.75);
+      z-index: 9999;
+    }
+
+    .modal-overlay.open,
+    .lightbox.open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: min(1100px, 96vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+    }
+
+    .modal-close,
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-close {
+      color: #111827;
+    }
+
+    .lightbox-close {
+      color: white;
+    }
+
+    .modal-title {
+      margin: 0 0 10px 0;
+      font-size: 28px;
+      padding-right: 28px;
+      word-break: break-word;
+    }
+
+    .modal-block {
+      margin-top: 20px;
+    }
+
+    .modal-block h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .modal-description,
+    .comment-body {
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.7;
       color: #374151;
     }
 
@@ -265,220 +432,83 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
-      word-break: break-word;
     }
 
     .images-wrap {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 220px));
       gap: 12px;
+    }
+
+    .images-wrap img,
+    .lightbox img {
       width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: white;
+      cursor: pointer;
     }
 
     .images-wrap img {
-      width: 100%;
-      max-width: 100%;
       height: 160px;
       object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      cursor: pointer;
-      background: #fff;
-    }
-
-    .issue-footer {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      font-size: 13px;
-      color: #6b7280;
-      margin-top: 10px;
-    }
-
-    .issue-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .action-btn {
-      background: #eef2ff;
-      color: #3730a3;
-      border: none;
-      border-radius: 10px;
-      padding: 9px 12px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .toggle-comments-btn {
-      margin-top: 12px;
-      background: #eef2ff;
-      color: #3730a3;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .comments-section {
-      margin-top: 14px;
-      border-top: 1px solid #e5e7eb;
-      padding-top: 14px;
-      display: none;
-    }
-
-    .comments-section.open {
-      display: block;
-    }
-
-    .comments-section h4 {
-      margin: 0 0 10px 0;
-      font-size: 15px;
-    }
-
-    .comment {
-      background: #f9fafb;
-      border-radius: 10px;
-      padding: 12px;
-      margin-bottom: 12px;
-      width: 100%;
-    }
-
-    .comment-meta {
-      font-size: 12px;
-      color: #6b7280;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    .comment-body {
-      font-size: 14px;
-      line-height: 1.55;
-      color: #374151;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
-    .empty {
-      color: #6b7280;
-      text-align: center;
-    }
-
-    .footer {
-      margin-top: 32px;
-      color: #6b7280;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .lightbox,
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.82);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 9999;
-    }
-
-    .lightbox.open,
-    .modal-overlay.open {
-      display: flex;
     }
 
     .lightbox img {
       max-width: 95vw;
       max-height: 90vh;
-      border-radius: 12px;
-      background: white;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
 
-    .lightbox-close,
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 18px;
-      color: white;
-      font-size: 34px;
+    .comment {
+      background: #f9fafb;
+      border: 1px solid #edf2f7;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
       font-weight: bold;
-      cursor: pointer;
     }
 
-    .modal-card {
-      width: min(1100px, 96vw);
-      max-height: 90vh;
-      overflow-y: auto;
-      background: white;
-      border-radius: 16px;
-      padding: 22px;
-      position: relative;
-      color: #1f2937;
+    .collapse-btn {
+      margin-top: 12px;
     }
 
-    .modal-close {
-      color: #111827;
-      top: 12px;
-      right: 16px;
-      font-size: 30px;
-    }
-
-    .modal-header {
-      margin-bottom: 14px;
-      padding-right: 30px;
-    }
-
-    .modal-header h2 {
-      margin: 0 0 8px 0;
-      font-size: 28px;
-      word-break: break-word;
-    }
-
-    .modal-section {
-      margin-top: 20px;
-    }
-
-    .modal-section h3 {
-      margin: 0 0 10px 0;
-      font-size: 18px;
-    }
-
-    .modal-description {
-      white-space: pre-wrap;
-      line-height: 1.7;
-      word-break: break-word;
-    }
-
-    @media (max-width: 900px) {
-      .toolbar {
+    @media (max-width: 1000px) {
+      .toolbar-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       .container {
         padding: 16px;
       }
 
-      .header h1 {
-        font-size: 26px;
+      .hero {
+        padding: 20px;
       }
 
-      .issue h3,
-      .submit-card h2 {
-        font-size: 18px;
+      .hero h1 {
+        font-size: 28px;
       }
 
-      .toolbar {
+      .toolbar-grid {
         grid-template-columns: 1fr;
       }
 
-      .images-wrap {
-        grid-template-columns: 1fr;
+      .issue-top,
+      .issue-footer,
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .modal-card {
@@ -486,7 +516,7 @@
         padding: 16px;
       }
 
-      .modal-header h2 {
+      .modal-title {
         font-size: 22px;
       }
     }
@@ -494,95 +524,101 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h1>TOBCAD Status</h1>
-      <p>Public status page for bugs, feature requests, and suggestions.</p>
-    </div>
-
-    <div class="submit-section">
-      <div class="submit-card">
-        <h2>Bug Reports</h2>
-        <p>
-          This is to report anything that is currently implemented and not working or broken.
-          This is not to request things to be changed or added.
-        </p>
-        <a class="submit-button bug-button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZURTNKVTdXQTFKUE9SVFNIWUg1R0ZMVElDRS4u" target="_blank" rel="noopener noreferrer">
-          Submit Bug Report
-        </a>
-      </div>
-
-      <div class="submit-card">
-        <h2>Suggestion Requests</h2>
-        <p>
-          This is to request or report anything that is not yet implemented, such as suggestions,
-          new features, ideas, or improvements. This is not to report a bug.
-        </p>
-        <a class="submit-button feature-button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZUNExKMklMSkoxMjhGQVpTWExBSlNVRjBOQS4u" target="_blank" rel="noopener noreferrer">
-          Submit Suggestion / Feature Request
-        </a>
+    <div class="hero">
+      <h1>TOBCAD Status & Feedback</h1>
+      <p>
+        Track known issues, planned improvements, completed work, and current service health.
+        Use the buttons below to report bugs or submit ideas for future features.
+      </p>
+      <div class="notice">
+        If you have any questions, please text or email me. If you would like access to the CAD,
+        please text me if you do not already have access. This project is unofficial. No town
+        material or official information should be put into the CAD until IT approval is given.
       </div>
     </div>
 
-    <div class="notice">
-      If you have any questions, please text or email me. If you would like access to the CAD,
-      please text me if you do not already have access. Remember, this is unofficial and no town
-      material or anything official should be put onto the CAD until approval is given from IT.
-      This is an offline project.
-    </div>
-
-    <div class="summary">
-      <div class="card">
-        <h2>Total Items</h2>
-        <div class="value" id="totalCount">0</div>
+    <div class="quick-actions">
+      <div class="action-card">
+        <h2>Report a Bug</h2>
+        <p>Something broken, not working, or behaving incorrectly? Submit a bug report here.</p>
+        <a class="action-btn bug-btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZURTNKVTdXQTFKUE9SVFNIWUg1R0ZMVElDRS4u" target="_blank" rel="noopener noreferrer">Submit Bug Report</a>
       </div>
 
-      <div class="card">
-        <h2>Active Items</h2>
-        <div class="value" id="activeCount">0</div>
-      </div>
-
-      <div class="card">
-        <h2>Completed</h2>
-        <div class="value" id="completedCount">0</div>
-      </div>
-
-      <div class="card">
-        <h2>Last Updated</h2>
-        <div class="value" id="lastUpdated" style="font-size:18px;">-</div>
-      </div>
-
-      <div class="card">
-        <h2>Server Status</h2>
-        <div class="value server-unknown" id="serverStatusText">Unknown</div>
-        <div class="server-meta" id="serverStatusMeta">No server status available.</div>
+      <div class="action-card">
+        <h2>Suggest a Feature</h2>
+        <p>Have an idea for a new tool, workflow, or improvement? Submit it as a suggestion.</p>
+        <a class="action-btn feature-btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZUNExKMklMSkoxMjhGQVpTWExBSlNVRjBOQS4u" target="_blank" rel="noopener noreferrer">Submit Feature Request</a>
       </div>
     </div>
 
-    <div class="toolbar">
-      <input id="searchBox" type="text" placeholder="Search title, description, or comments..." />
-      <select id="typeFilter">
-        <option value="all">All Types</option>
-        <option value="bug">Bugs</option>
-        <option value="feature">Features</option>
-      </select>
-      <select id="statusFilter">
-        <option value="active">Active Only</option>
-        <option value="all">All Statuses</option>
-        <option value="Open">Open</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Planned">Planned</option>
-        <option value="Completed">Completed</option>
-      </select>
-      <select id="sortFilter">
-        <option value="updated-desc">Newest First</option>
-        <option value="updated-asc">Oldest First</option>
-        <option value="comments-desc">Most Comments</option>
-      </select>
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-label">Total Items</div>
+        <div class="metric-value" id="totalCount">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Active Items</div>
+        <div class="metric-value" id="activeCount">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Completed</div>
+        <div class="metric-value" id="completedCount">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Last Updated</div>
+        <div class="metric-value" id="lastUpdated" style="font-size:20px;">-</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Server Status</div>
+        <div class="metric-value unknown" id="serverStatusText">Unknown</div>
+        <div class="metric-sub" id="serverStatusMeta">No server status available.</div>
+      </div>
     </div>
 
-    <h2 class="section-title">Current Items</h2>
-    <div class="subtext">Completed items are hidden by default.</div>
-    <div id="issueList" class="issue-list"></div>
+    <div class="toolbar panel">
+      <div class="toolbar-grid">
+        <input id="searchBox" type="text" placeholder="Search title, description, or comments..." />
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+          <option value="bug">Bugs</option>
+          <option value="feature">Features</option>
+        </select>
+        <select id="statusFilter">
+          <option value="active">Active Only</option>
+          <option value="all">All Statuses</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Planned">Planned</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <select id="sortFilter">
+          <option value="updated-desc">Newest First</option>
+          <option value="updated-asc">Oldest First</option>
+          <option value="comments-desc">Most Comments</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <h2>Active Items</h2>
+          <p>Open issues and planned improvements currently being tracked.</p>
+        </div>
+      </div>
+      <div id="activeIssueList" class="issue-list"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <h2>Recently Completed</h2>
+          <p>Finished items are separated here to keep the main list easier to scan.</p>
+        </div>
+        <button id="toggleCompletedBtn" class="btn-ghost">Show Completed</button>
+      </div>
+      <div id="completedIssueList" class="issue-list" style="display:none;"></div>
+    </div>
 
     <div class="footer">TOBCAD public status page</div>
   </div>
@@ -593,7 +629,7 @@
   </div>
 
   <div class="modal-overlay" id="issueModal">
-    <div class="modal-card" id="issueModalCard">
+    <div class="modal-card">
       <div class="modal-close" id="issueModalClose">&times;</div>
       <div id="issueModalContent"></div>
     </div>
@@ -601,6 +637,7 @@
 
   <script>
     let allItems = [];
+    let completedVisible = false;
 
     async function loadStatus() {
       try {
@@ -614,8 +651,8 @@
         renderServerStatus(payload.serverStatus);
         renderItems();
       } catch (error) {
-        document.getElementById("issueList").innerHTML =
-          '<div class="empty">Failed to load status data.</div>';
+        document.getElementById("activeIssueList").innerHTML = '<div class="empty">Failed to load status data.</div>';
+        document.getElementById("completedIssueList").innerHTML = "";
         console.error(error);
       }
     }
@@ -633,11 +670,11 @@
       const text = document.getElementById("serverStatusText");
       const meta = document.getElementById("serverStatusMeta");
 
-      text.classList.remove("server-online", "server-offline", "server-unknown");
+      text.classList.remove("online", "offline", "unknown");
 
       if (!serverStatus) {
         text.textContent = "Unknown";
-        text.classList.add("server-unknown");
+        text.classList.add("unknown");
         meta.textContent = "No server status available.";
         return;
       }
@@ -645,14 +682,14 @@
       const status = serverStatus.status || "Unknown";
       text.textContent = status;
 
-      if (status === "Online") text.classList.add("server-online");
-      else if (status === "Offline") text.classList.add("server-offline");
-      else text.classList.add("server-unknown");
+      if (status === "Online") text.classList.add("online");
+      else if (status === "Offline") text.classList.add("offline");
+      else text.classList.add("unknown");
 
       meta.textContent = `HTTP ${serverStatus.statusCode || "-"} • Checked ${serverStatus.checkedAt || "-"}`;
     }
 
-    function renderItems() {
+    function getFilteredItems() {
       const typeFilter = document.getElementById("typeFilter").value;
       const statusFilter = document.getElementById("statusFilter").value;
       const sortFilter = document.getElementById("sortFilter").value;
@@ -660,9 +697,7 @@
 
       let filtered = [...allItems];
 
-      if (typeFilter !== "all") {
-        filtered = filtered.filter(i => i.type === typeFilter);
-      }
+      if (typeFilter !== "all") filtered = filtered.filter(i => i.type === typeFilter);
 
       if (statusFilter === "active") {
         filtered = filtered.filter(i => !i.isCompleted);
@@ -688,155 +723,88 @@
       } else if (sortFilter === "comments-desc") {
         filtered.sort((a, b) => (b.commentCount || 0) - (a.commentCount || 0));
       } else {
-        filtered.sort((a, b) => {
-          if ((a.isCompleted ? 1 : 0) !== (b.isCompleted ? 1 : 0)) {
-            return (a.isCompleted ? 1 : 0) - (b.isCompleted ? 1 : 0);
-          }
-          return new Date(b.updated) - new Date(a.updated);
-        });
+        filtered.sort((a, b) => new Date(b.updated) - new Date(a.updated));
       }
 
-      const container = document.getElementById("issueList");
+      return filtered;
+    }
 
-      if (!filtered.length) {
-        container.innerHTML = '<div class="empty">No matching items found.</div>';
+    function renderItems() {
+      const filtered = getFilteredItems();
+      const active = filtered.filter(item => !item.isCompleted);
+      const completed = filtered.filter(item => item.isCompleted);
+
+      renderIssueList("activeIssueList", active, "No active items found.");
+      renderIssueList("completedIssueList", completed, "No completed items found.");
+    }
+
+    function renderIssueList(containerId, items, emptyMessage) {
+      const container = document.getElementById(containerId);
+
+      if (!items.length) {
+        container.innerHTML = `<div class="empty">${emptyMessage}</div>`;
         return;
       }
 
-      container.innerHTML = filtered.map((item, index) => {
-        const statusClass = item.status.toLowerCase().replace(/\s+/g, "-");
-        const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
-        const commentsId = `comments-${index}-${item.number}`;
-
-        const issueImagesHtml = item.images && item.images.length ? `
-          <div class="image-grid">
-            <h4>Images</h4>
-            <div class="images-wrap">
-              ${item.images.map(src => `
-                <img src="${escapeAttribute(src)}" alt="Issue image" onclick="openLightbox('${escapeJs(src)}')" />
-              `).join("")}
-            </div>
-          </div>
-        ` : '';
-
-        const issueAttachmentsHtml = item.attachments && item.attachments.length ? `
-          <div class="attachments">
-            <h4>Attachments</h4>
-            <div class="attachment-list">
-              ${item.attachments.map(file => `
-                <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
-                  ${escapeHtml(file.name || "Attachment")}
-                </a>
-              `).join("")}
-            </div>
-          </div>
-        ` : '';
-
-        const commentsHtml = (item.comments && item.comments.length)
-          ? `
-            <button class="toggle-comments-btn" onclick="toggleComments('${commentsId}', this, ${item.comments.length})">
-              Show Updates (${item.comments.length})
-            </button>
-            <div class="comments-section" id="${commentsId}">
-              <h4>Recent Updates</h4>
-              ${item.comments.map(comment => `
-                <div class="comment">
-                  <div class="comment-meta">
-                    ${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}
-                  </div>
-                  <div class="comment-body">${escapeHtml(comment.body || "")}</div>
-
-                  ${
-                    comment.images && comment.images.length
-                      ? `
-                        <div class="comment-images">
-                          <h5>Images</h5>
-                          <div class="images-wrap">
-                            ${comment.images.map(src => `
-                              <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
-                            `).join("")}
-                          </div>
-                        </div>
-                      `
-                      : ""
-                  }
-
-                  ${
-                    comment.attachments && comment.attachments.length
-                      ? `
-                        <div class="comment-attachments">
-                          <h5>Attachments</h5>
-                          <div class="attachment-list">
-                            ${comment.attachments.map(file => `
-                              <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
-                                ${escapeHtml(file.name || "Attachment")}
-                              </a>
-                            `).join("")}
-                          </div>
-                        </div>
-                      `
-                      : ""
-                  }
-                </div>
-              `).join("")}
-            </div>
-          `
-          : '';
+      container.innerHTML = items.map(item => {
+        const statusBadge = getStatusBadgeClass(item.status);
+        const typeBadge = item.type === "bug" ? "badge-bug" : "badge-feature";
 
         return `
-          <div class="issue ${statusClass}">
-            <div class="top-row">
-              <div class="issue-title-line">
+          <div class="issue-card ${item.type} ${item.isCompleted ? "completed" : ""}">
+            <div class="issue-top">
+              <div class="issue-title-wrap">
                 <h3>${escapeHtml(item.title)}</h3>
-                <span class="issue-number">#${item.number}</span>
+                <div class="issue-meta">#${item.number} • Updated ${escapeHtml(item.updated || "-")}</div>
               </div>
               <div class="badges">
-                <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
-                <span class="badge badge-status">${escapeHtml(item.status)}</span>
+                <span class="badge ${typeBadge}">${item.type.toUpperCase()}</span>
+                <span class="badge ${statusBadge}">${escapeHtml(item.status)}</span>
               </div>
             </div>
 
-            <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
-            <div class="description compact">${escapeHtml(item.description || "No description provided.")}</div>
-
-            <div class="issue-actions">
-              <button class="action-btn" onclick="openIssueModal(${findItemIndex(item.number)})">View Details</button>
-            </div>
-
-            ${commentsHtml}
+            <div class="issue-preview">${escapeHtml(item.description || "No description provided.")}</div>
 
             <div class="issue-footer">
-              <span>Comments: ${item.commentCount || 0}</span>
-              <span>Last comment: ${escapeHtml(item.lastCommentAt || "None")}</span>
+              <div class="issue-stats">
+                <span>Comments: ${item.commentCount || 0}</span>
+                <span>Last comment: ${escapeHtml(item.lastCommentAt || "None")}</span>
+              </div>
+              <div class="issue-actions">
+                <button class="btn-secondary" onclick="openIssueModal(${item.number})">View Details</button>
+              </div>
             </div>
           </div>
         `;
       }).join("");
     }
 
-    function findItemIndex(issueNumber) {
-      return allItems.findIndex(item => item.number === issueNumber);
+    function getStatusBadgeClass(status) {
+      if (status === "Open") return "badge-open";
+      if (status === "In Progress") return "badge-progress";
+      if (status === "Planned") return "badge-planned";
+      if (status === "Completed") return "badge-completed";
+      return "badge-open";
     }
 
-    function openIssueModal(index) {
-      const item = allItems[index];
+    function openIssueModal(issueNumber) {
+      const item = allItems.find(i => i.number === issueNumber);
       if (!item) return;
 
-      const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
+      const typeBadge = item.type === "bug" ? "badge-bug" : "badge-feature";
+      const statusBadge = getStatusBadgeClass(item.status);
 
       const issueImagesHtml = item.images && item.images.length ? `
-        <div class="modal-section">
+        <div class="modal-block">
           <h3>Images</h3>
           <div class="images-wrap">
-            ${item.images.map(src => `
-              <img src="${escapeAttribute(src)}" alt="Issue image" onclick="openLightbox('${escapeJs(src)}')" />
-            `).join("")}
+            ${item.images.map(src => `<img src="${escapeAttribute(src)}" alt="Issue image" onclick="openLightbox('${escapeJs(src)}')" />`).join("")}
           </div>
         </div>
       ` : '';
 
       const issueAttachmentsHtml = item.attachments && item.attachments.length ? `
-        <div class="modal-section">
+        <div class="modal-block">
           <h3>Attachments</h3>
           <div class="attachment-list">
             ${item.attachments.map(file => `
@@ -849,45 +817,29 @@
       ` : '';
 
       const commentsHtml = item.comments && item.comments.length ? `
-        <div class="modal-section">
+        <div class="modal-block">
           <h3>Recent Updates</h3>
           ${item.comments.map(comment => `
             <div class="comment">
-              <div class="comment-meta">
-                ${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}
-              </div>
+              <div class="comment-meta">${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}</div>
               <div class="comment-body">${escapeHtml(comment.body || "")}</div>
-
               ${
-                comment.images && comment.images.length
-                  ? `
-                    <div class="comment-images">
-                      <h5>Images</h5>
-                      <div class="images-wrap">
-                        ${comment.images.map(src => `
-                          <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
-                        `).join("")}
-                      </div>
-                    </div>
-                  `
-                  : ""
+                comment.images && comment.images.length ? `
+                  <div class="images-wrap" style="margin-top:12px;">
+                    ${comment.images.map(src => `<img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />`).join("")}
+                  </div>
+                ` : ''
               }
-
               ${
-                comment.attachments && comment.attachments.length
-                  ? `
-                    <div class="comment-attachments">
-                      <h5>Attachments</h5>
-                      <div class="attachment-list">
-                        ${comment.attachments.map(file => `
-                          <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
-                            ${escapeHtml(file.name || "Attachment")}
-                          </a>
-                        `).join("")}
-                      </div>
-                    </div>
-                  `
-                  : ""
+                comment.attachments && comment.attachments.length ? `
+                  <div class="attachment-list" style="margin-top:12px;">
+                    ${comment.attachments.map(file => `
+                      <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
+                        ${escapeHtml(file.name || "Attachment")}
+                      </a>
+                    `).join("")}
+                  </div>
+                ` : ''
               }
             </div>
           `).join("")}
@@ -895,19 +847,18 @@
       ` : '';
 
       document.getElementById("issueModalContent").innerHTML = `
-        <div class="modal-header">
-          <h2>${escapeHtml(item.title)}</h2>
-          <div class="badges">
-            <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
-            <span class="badge badge-status">${escapeHtml(item.status)}</span>
-            <span class="badge badge-status">#${item.number}</span>
-          </div>
-          <div class="meta" style="margin-top:10px;">
-            Updated: ${escapeHtml(item.updated || "-")} • Comments: ${item.commentCount || 0} • Last comment: ${escapeHtml(item.lastCommentAt || "None")}
-          </div>
+        <h2 class="modal-title">${escapeHtml(item.title)}</h2>
+        <div class="badges" style="margin-bottom:10px;">
+          <span class="badge ${typeBadge}">${item.type.toUpperCase()}</span>
+          <span class="badge ${statusBadge}">${escapeHtml(item.status)}</span>
+          <span class="badge btn-ghost" style="padding:6px 10px;">#${item.number}</span>
         </div>
 
-        <div class="modal-section">
+        <div class="issue-meta" style="margin-bottom:14px;">
+          Updated: ${escapeHtml(item.updated || "-")} • Comments: ${item.commentCount || 0} • Last comment: ${escapeHtml(item.lastCommentAt || "None")}
+        </div>
+
+        <div class="modal-block">
           <h3>Description</h3>
           <div class="modal-description">${escapeHtml(item.description || "No description provided.")}</div>
         </div>
@@ -923,19 +874,6 @@
     function closeIssueModal() {
       document.getElementById("issueModal").classList.remove("open");
       document.getElementById("issueModalContent").innerHTML = "";
-    }
-
-    function toggleComments(id, button, count) {
-      const section = document.getElementById(id);
-      if (!section) return;
-
-      section.classList.toggle("open");
-
-      if (section.classList.contains("open")) {
-        button.textContent = "Hide Updates";
-      } else {
-        button.textContent = `Show Updates (${count})`;
-      }
     }
 
     function openLightbox(src) {
@@ -971,13 +909,19 @@
     document.getElementById("sortFilter").addEventListener("change", renderItems);
     document.getElementById("searchBox").addEventListener("input", renderItems);
 
-    document.getElementById("lightbox").addEventListener("click", closeLightbox);
-    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+    document.getElementById("toggleCompletedBtn").addEventListener("click", function() {
+      completedVisible = !completedVisible;
+      document.getElementById("completedIssueList").style.display = completedVisible ? "grid" : "none";
+      this.textContent = completedVisible ? "Hide Completed" : "Show Completed";
+    });
 
     document.getElementById("issueModal").addEventListener("click", function(e) {
       if (e.target.id === "issueModal") closeIssueModal();
     });
     document.getElementById("issueModalClose").addEventListener("click", closeIssueModal);
+
+    document.getElementById("lightbox").addEventListener("click", closeLightbox);
+    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
 
     loadStatus();
   </script>
