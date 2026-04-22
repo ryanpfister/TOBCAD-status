@@ -307,79 +307,98 @@
     <div class="footer">TOBCAD public status page</div>
   </div>
 
-  <script>
-    let allItems = [];
+ <script>
+  let allItems = [];
 
-    async function loadStatus() {
-      try {
-        const response = await fetch("./status.json?v=" + Date.now());
-        if (!response.ok) throw new Error("Could not load status.json");
-        allItems = await response.json();
-        renderSummary(allItems);
-        renderItems();
-      } catch (error) {
-        document.getElementById("issueList").innerHTML =
-          '<div class="empty">Failed to load status data.</div>';
-        console.error(error);
-      }
+  async function loadStatus() {
+    try {
+      const response = await fetch("./status.json?v=" + Date.now());
+      if (!response.ok) throw new Error("Could not load status.json");
+      allItems = await response.json();
+      renderSummary(allItems);
+      renderItems();
+      loadServerStatus();
+    } catch (error) {
+      document.getElementById("issueList").innerHTML =
+        '<div class="empty">Failed to load status data.</div>';
+      console.error(error);
+    }
+  }
+
+  function renderSummary(items) {
+    document.getElementById("totalCount").textContent = items.length;
+    document.getElementById("activeCount").textContent =
+      items.filter(i => ["Open", "In Progress", "Planned"].includes(i.status)).length;
+    document.getElementById("completedCount").textContent =
+      items.filter(i => i.status === "Completed").length;
+
+    const dates = items.map(i => i.updated).filter(Boolean).sort().reverse();
+    document.getElementById("lastUpdated").textContent = dates[0] || "-";
+  }
+
+  function renderItems() {
+    const typeFilter = document.getElementById("typeFilter").value;
+    const statusFilter = document.getElementById("statusFilter").value;
+
+    let filtered = [...allItems];
+    if (typeFilter !== "all") filtered = filtered.filter(i => i.type === typeFilter);
+    if (statusFilter !== "all") filtered = filtered.filter(i => i.status === statusFilter);
+
+    filtered.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+
+    const container = document.getElementById("issueList");
+    if (!filtered.length) {
+      container.innerHTML = '<div class="empty">No matching items found.</div>';
+      return;
     }
 
-    function renderSummary(items) {
-      document.getElementById("totalCount").textContent = items.length;
-      document.getElementById("activeCount").textContent =
-        items.filter(i => ["Open", "In Progress", "Planned"].includes(i.status)).length;
-      document.getElementById("completedCount").textContent =
-        items.filter(i => i.status === "Completed").length;
+    container.innerHTML = filtered.map(item => {
+      const statusClass = item.status.toLowerCase().replace(/\s+/g, "-");
+      const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
 
-      const dates = items.map(i => i.updated).filter(Boolean).sort().reverse();
-      document.getElementById("lastUpdated").textContent = dates[0] || "-";
-    }
-
-    function renderItems() {
-      const typeFilter = document.getElementById("typeFilter").value;
-      const statusFilter = document.getElementById("statusFilter").value;
-
-      let filtered = [...allItems];
-      if (typeFilter !== "all") filtered = filtered.filter(i => i.type === typeFilter);
-      if (statusFilter !== "all") filtered = filtered.filter(i => i.status === statusFilter);
-
-      filtered.sort((a, b) => new Date(b.updated) - new Date(a.updated));
-
-      const container = document.getElementById("issueList");
-      if (!filtered.length) {
-        container.innerHTML = '<div class="empty">No matching items found.</div>';
-        return;
-      }
-
-      container.innerHTML = filtered.map(item => {
-        const statusClass = item.status.toLowerCase().replace(/\s+/g, "-");
-        const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
-        return `
-          <div class="issue ${statusClass}">
-            <div class="top-row">
-              <h3>${escapeHtml(item.title)}</h3>
-              <div class="badges">
-                <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
-                <span class="badge badge-status">${escapeHtml(item.status)}</span>
+      const commentsHtml = (item.comments && item.comments.length)
+        ? `
+          <div class="comments-section">
+            <h4>Recent Updates</h4>
+            ${item.comments.map(comment => `
+              <div class="comment">
+                <div class="comment-meta">
+                  ${escapeHtml(comment.author)} · ${escapeHtml(comment.updated || "-")}
+                </div>
+                <div class="comment-body">${escapeHtml(comment.body || "")}</div>
               </div>
-            </div>
-            <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
-            <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
+            `).join("")}
           </div>
-        `;
-      }).join("");
-    }
+        `
+        : '';
 
-    function escapeHtml(text) {
-      const div = document.createElement("div");
-      div.textContent = text || "";
-      return div.innerHTML;
-    }
+      return `
+        <div class="issue ${statusClass}">
+          <div class="top-row">
+            <h3>${escapeHtml(item.title)}</h3>
+            <div class="badges">
+              <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
+              <span class="badge badge-status">${escapeHtml(item.status)}</span>
+            </div>
+          </div>
+          <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
+          <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
+          ${commentsHtml}
+        </div>
+      `;
+    }).join("");
+  }
 
-    document.getElementById("typeFilter").addEventListener("change", renderItems);
-    document.getElementById("statusFilter").addEventListener("change", renderItems);
+  function escapeHtml(text) {
+    const div = document.createElement("div");
+    div.textContent = text || "";
+    return div.innerHTML;
+  }
 
-    loadStatus();
-  </script>
+  document.getElementById("typeFilter").addEventListener("change", renderItems);
+  document.getElementById("statusFilter").addEventListener("change", renderItems);
+
+  loadStatus();
+</script>
 </body>
 </html>
