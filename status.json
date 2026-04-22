@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:51:57Z"
+    "checkedAt": "2026-04-22T15:53:32Z"
   },
-  "generatedAt": "2026-04-22T15:51:59.246Z",
+  "generatedAt": "2026-04-22T15:53:33.051Z",
   "items": [
     {
       "number": 43,
@@ -178,8 +178,8 @@
       "number": 30,
       "title": "Feature: Allow admins to reset user password from the admin panel",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Requestor: Ryan Pfister\n\nSummary:\nAllow admins and supervisors to request a reset password to a users assigned email from the admin panel. Also when creating a user for the first time, allow the creator to send a temporary password to the user to log into for the first time, then have them change it.\n\nProblem to Solve:\nPassword Issues\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
