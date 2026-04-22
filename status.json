@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:50:29Z"
+    "checkedAt": "2026-04-22T15:51:01Z"
   },
-  "generatedAt": "2026-04-22T15:50:29.231Z",
+  "generatedAt": "2026-04-22T15:51:01.270Z",
   "items": [
+    {
+      "number": 42,
+      "title": "CC Update",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "If we can make the CC number editable as well on created call, in instance dispatch puts in the wrong CC number.",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 41,
       "title": "[BUG]: Unexpected Token",
