@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:41:21Z"
+    "checkedAt": "2026-04-22T14:45:29Z"
   },
-  "generatedAt": "2026-04-22T14:41:21.650Z",
+  "generatedAt": "2026-04-22T14:45:29.291Z",
   "items": [
     {
       "number": 31,
@@ -180,29 +180,6 @@
       "lastCommentAt": null
     },
     {
-      "number": 15,
-      "title": "Add Email Server",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "Add email server for email reports, daily reports, new users creations, password reset, send a email to the user when the account is first created to setup a password, etc.",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T14:15:20Z",
-          "updatedShort": "2026-04-22",
-          "body": "Currently working on this",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 1,
-      "lastCommentAt": "2026-04-22"
-    },
-    {
       "number": 21,
       "title": "None",
       "type": "bug",
@@ -270,6 +247,37 @@
         }
       ],
       "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 15,
+      "title": "Add Email Server",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Add email server for email reports, daily reports, new users creations, password reset, send a email to the user when the account is first created to setup a password, etc.",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:45:19Z",
+          "updatedShort": "2026-04-22",
+          "body": "Completed, see commit claude/brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:15:20Z",
+          "updatedShort": "2026-04-22",
+          "body": "Currently working on this",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 2,
       "lastCommentAt": "2026-04-22"
     },
     {
