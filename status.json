@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:57:24Z"
+    "checkedAt": "2026-04-22T16:59:05Z"
   },
-  "generatedAt": "2026-04-22T16:57:27.132Z",
+  "generatedAt": "2026-04-22T16:59:05.468Z",
   "items": [
+    {
+      "number": 47,
+      "title": "[BUG]: After an event is created",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "After an event is created, if you want to switch the event type, the event list disappears in the drop box",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 46,
       "title": "[FEATURE]: Dispatch log",
