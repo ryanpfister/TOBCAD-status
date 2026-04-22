@@ -15,9 +15,10 @@
     }
 
     .container {
-      max-width: 1150px;
+      width: 100%;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 24px;
     }
 
     .header h1 {
@@ -85,7 +86,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
-      margin: 24px 0 24px 0;
+      margin: 24px 0;
     }
 
     .card h2 {
@@ -112,9 +113,10 @@
 
     .toolbar {
       display: grid;
-      grid-template-columns: 1.2fr repeat(3, minmax(140px, 180px));
+      grid-template-columns: minmax(240px, 2fr) repeat(3, minmax(160px, 1fr));
       gap: 12px;
       margin-bottom: 20px;
+      width: 100%;
     }
 
     .toolbar input,
@@ -141,10 +143,12 @@
     .issue-list {
       display: grid;
       gap: 16px;
+      width: 100%;
     }
 
     .issue {
       border-left: 6px solid #d1d5db;
+      width: 100%;
     }
 
     .issue.open { border-left-color: #2563eb; }
@@ -164,6 +168,7 @@
     .issue h3 {
       margin: 0;
       font-size: 20px;
+      word-break: break-word;
     }
 
     .issue-title-line {
@@ -171,6 +176,7 @@
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
+      max-width: 100%;
     }
 
     .issue-number {
@@ -211,11 +217,66 @@
       color: #6b7280;
       font-size: 14px;
       margin-bottom: 10px;
+      word-break: break-word;
     }
 
     .description {
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 14px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .attachments,
+    .image-grid,
+    .comment-attachments,
+    .comment-images {
+      margin-top: 12px;
+    }
+
+    .attachments h4,
+    .image-grid h4,
+    .comment-attachments h5,
+    .comment-images h5 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .attachment-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .attachment-link {
+      display: inline-block;
+      padding: 8px 10px;
+      background: #eef2ff;
+      color: #3730a3;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    .images-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+      gap: 12px;
+      width: 100%;
+    }
+
+    .images-wrap img {
+      width: 100%;
+      max-width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      cursor: pointer;
+      background: #fff;
     }
 
     .issue-footer {
@@ -228,7 +289,7 @@
     }
 
     .toggle-comments-btn {
-      margin-top: 8px;
+      margin-top: 12px;
       background: #eef2ff;
       color: #3730a3;
       border: none;
@@ -259,6 +320,7 @@
       border-radius: 10px;
       padding: 12px;
       margin-bottom: 12px;
+      width: 100%;
     }
 
     .comment-meta {
@@ -270,26 +332,10 @@
 
     .comment-body {
       font-size: 14px;
-      line-height: 1.45;
+      line-height: 1.55;
       color: #374151;
       white-space: pre-wrap;
-    }
-
-    .comment-images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .comment-images img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-      border: 1px solid #e5e7eb;
-      background: #fff;
+      word-break: break-word;
     }
 
     .empty {
@@ -343,9 +389,26 @@
     }
 
     @media (max-width: 640px) {
-      .header h1 { font-size: 26px; }
-      .issue h3, .submit-card h2 { font-size: 18px; }
-      .toolbar { grid-template-columns: 1fr; }
+      .container {
+        padding: 16px;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+
+      .issue h3,
+      .submit-card h2 {
+        font-size: 18px;
+      }
+
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .images-wrap {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -363,12 +426,7 @@
           This is to report anything that is currently implemented and not working or broken.
           This is not to request things to be changed or added.
         </p>
-        <a
-          class="submit-button bug-button"
-          href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZURTNKVTdXQTFKUE9SVFNIWUg1R0ZMVElDRS4u"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="submit-button bug-button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZURTNKVTdXQTFKUE9SVFNIWUg1R0ZMVElDRS4u" target="_blank" rel="noopener noreferrer">
           Submit Bug Report
         </a>
       </div>
@@ -379,12 +437,7 @@
           This is to request or report anything that is not yet implemented, such as suggestions,
           new features, ideas, or improvements. This is not to report a bug.
         </p>
-        <a
-          class="submit-button feature-button"
-          href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZUNExKMklMSkoxMjhGQVpTWExBSlNVRjBOQS4u"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="submit-button feature-button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=WMFuhUvzT0uYULAJza5J_m8GzfX6QcJImBH66vDu75ZUNExKMklMSkoxMjhGQVpTWExBSlNVRjBOQS4u" target="_blank" rel="noopener noreferrer">
           Submit Suggestion / Feature Request
         </a>
       </div>
@@ -456,7 +509,7 @@
 
   <div class="lightbox" id="lightbox">
     <div class="lightbox-close" id="lightboxClose">&times;</div>
-    <img id="lightboxImage" alt="Expanded comment image" />
+    <img id="lightboxImage" alt="Expanded image" />
   </div>
 
   <script>
@@ -482,10 +535,8 @@
 
     function renderSummary(items) {
       document.getElementById("totalCount").textContent = items.length;
-      document.getElementById("activeCount").textContent =
-        items.filter(i => !i.isCompleted).length;
-      document.getElementById("completedCount").textContent =
-        items.filter(i => i.isCompleted).length;
+      document.getElementById("activeCount").textContent = items.filter(i => !i.isCompleted).length;
+      document.getElementById("completedCount").textContent = items.filter(i => i.isCompleted).length;
 
       const dates = items.map(i => i.updated).filter(Boolean).sort().reverse();
       document.getElementById("lastUpdated").textContent = dates[0] || "-";
@@ -537,7 +588,9 @@
           const haystack = [
             item.title,
             item.description,
-            ...(item.comments || []).map(c => c.body)
+            ...(item.comments || []).map(c => c.body),
+            ...(item.attachments || []).map(a => a.name),
+            ...(item.comments || []).flatMap(c => (c.attachments || []).map(a => a.name))
           ].join(" ").toLowerCase();
           return haystack.includes(search);
         });
@@ -568,9 +621,33 @@
         const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
         const commentsId = `comments-${index}-${item.number}`;
 
+        const issueImagesHtml = item.images && item.images.length ? `
+          <div class="image-grid">
+            <h4>Images</h4>
+            <div class="images-wrap">
+              ${item.images.map(src => `
+                <img src="${escapeAttribute(src)}" alt="Issue image" onclick="openLightbox('${escapeJs(src)}')" />
+              `).join("")}
+            </div>
+          </div>
+        ` : '';
+
+        const issueAttachmentsHtml = item.attachments && item.attachments.length ? `
+          <div class="attachments">
+            <h4>Attachments</h4>
+            <div class="attachment-list">
+              ${item.attachments.map(file => `
+                <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
+                  ${escapeHtml(file.name || "Attachment")}
+                </a>
+              `).join("")}
+            </div>
+          </div>
+        ` : '';
+
         const commentsHtml = (item.comments && item.comments.length)
           ? `
-            <button class="toggle-comments-btn" onclick="toggleComments('${commentsId}', this)">
+            <button class="toggle-comments-btn" onclick="toggleComments('${commentsId}', this, ${item.comments.length})">
               Show Updates (${item.comments.length})
             </button>
             <div class="comments-section" id="${commentsId}">
@@ -581,13 +658,36 @@
                     ${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}
                   </div>
                   <div class="comment-body">${escapeHtml(comment.body || "")}</div>
+
                   ${
                     comment.images && comment.images.length
-                      ? `<div class="comment-images">
-                          ${comment.images.map(src => `
-                            <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
-                          `).join("")}
-                        </div>`
+                      ? `
+                        <div class="comment-images">
+                          <h5>Images</h5>
+                          <div class="images-wrap">
+                            ${comment.images.map(src => `
+                              <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
+                            `).join("")}
+                          </div>
+                        </div>
+                      `
+                      : ""
+                  }
+
+                  ${
+                    comment.attachments && comment.attachments.length
+                      ? `
+                        <div class="comment-attachments">
+                          <h5>Attachments</h5>
+                          <div class="attachment-list">
+                            ${comment.attachments.map(file => `
+                              <a class="attachment-link" href="${escapeAttribute(file.link)}" target="_blank" rel="noopener noreferrer">
+                                ${escapeHtml(file.name || "Attachment")}
+                              </a>
+                            `).join("")}
+                          </div>
+                        </div>
+                      `
                       : ""
                   }
                 </div>
@@ -608,9 +708,14 @@
                 <span class="badge badge-status">${escapeHtml(item.status)}</span>
               </div>
             </div>
+
             <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
             <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
+
+            ${issueImagesHtml}
+            ${issueAttachmentsHtml}
             ${commentsHtml}
+
             <div class="issue-footer">
               <span>Comments: ${item.commentCount || 0}</span>
               <span>Last comment: ${escapeHtml(item.lastCommentAt || "None")}</span>
@@ -620,16 +725,16 @@
       }).join("");
     }
 
-    function toggleComments(id, button) {
+    function toggleComments(id, button, count) {
       const section = document.getElementById(id);
       if (!section) return;
+
       section.classList.toggle("open");
-      button.textContent = section.classList.contains("open")
-        ? "Hide Updates"
-        : button.textContent.replace("Hide Updates", "Show Updates");
-      if (!section.classList.contains("open")) {
-        const countText = section.querySelectorAll(".comment").length;
-        button.textContent = `Show Updates (${countText})`;
+
+      if (section.classList.contains("open")) {
+        button.textContent = "Hide Updates";
+      } else {
+        button.textContent = `Show Updates (${count})`;
       }
     }
 
