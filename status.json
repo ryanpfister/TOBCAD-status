@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:03:44Z"
+    "checkedAt": "2026-04-22T17:05:11Z"
   },
-  "generatedAt": "2026-04-22T17:03:44.925Z",
+  "generatedAt": "2026-04-22T17:05:12.986Z",
   "items": [
     {
       "number": 48,
@@ -75,8 +75,8 @@
       "number": 43,
       "title": "Monitor View",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Can we have the full event type info visible on both monitors? Some event types are more comprehensible then others but showing the full title would help",
       "images": [],
