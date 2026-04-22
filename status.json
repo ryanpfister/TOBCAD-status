@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:55:54Z"
+    "checkedAt": "2026-04-22T16:02:34Z"
   },
-  "generatedAt": "2026-04-22T15:55:54.771Z",
+  "generatedAt": "2026-04-22T16:02:35.996Z",
   "items": [
     {
       "number": 44,
@@ -170,9 +170,18 @@
       "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nSubmitting Memo Book\n\n### Summary\n\nWhen submitting the memo book for review this should be like the end of tour we want to change this process to submit the memo book, put the unit out of service, and log the unit out for the day. They should no longer be on the board or anything.\n\n### What problem would this solve?\n\nLogging Out\n\n### Proposed Solution\n\nSee Comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nMedium\n\n### Area\n\nOther\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Conf...",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:02:26Z",
+          "updatedShort": "2026-04-22",
+          "body": "Server (memo/index.ts) — POST /memo/submit for active (non-incomplete) tours now:\n\nSets endedAt = now alongside memoStatus = 'submitted' in a single DB update\nInserts a system memo entry: TOUR ENDED — Memo book submitted for review\nEmits officer:signed_off to the dispatch room\nChecks for ride-alongs on the same unit — if none, calls notificationService.unitOffDuty() to remove the unit from all boards\nAudit logs signedOff: true on the submission\nThe incomplete-tour submission path (for officers completing a force-ended tour) is unchanged.\n\nClient (MemoBookPanel.tsx) — On successful active-tour ...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 31,
