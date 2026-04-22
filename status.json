@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:51:22Z"
+    "checkedAt": "2026-04-22T16:54:24Z"
   },
-  "generatedAt": "2026-04-22T16:51:22.393Z",
+  "generatedAt": "2026-04-22T16:54:25.739Z",
   "items": [
     {
       "number": 46,
@@ -80,8 +80,8 @@
       "number": 40,
       "title": "CC on call box info and monitors",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Common name not showing on information box for CC or either event or unit monitor",
       "images": [],
