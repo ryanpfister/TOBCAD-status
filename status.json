@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:00:57Z"
+    "checkedAt": "2026-04-22T15:03:44Z"
   },
-  "generatedAt": "2026-04-22T15:00:57.952Z",
+  "generatedAt": "2026-04-22T15:03:45.390Z",
   "items": [
     {
       "number": 34,
@@ -183,13 +183,21 @@
       "number": 22,
       "title": "Hamlet not showing under location on unit monitor. Perhaps the common name should too?",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Reporter: J. Garcia\n\nDate & Time: N/A\n\nDescription:\nHamlet not showing under location on unit monitor. Perhaps the common name should too?\n\nWhere did this occur?\nMain Page\n\nSteps to Reproduce:\nN/A\n\nExpected Behavior:/\nMain Page\n\nActual Behavior::\nN/A\n\nSeverity:\nMedium (affects workflow)\n\nFrequency:\nAlways\n\nDevice Type:\nDesktop\n\nBrower / App:\nChrome\n\nError Messages:\n\n\nAdditional Notes:\n\n\nScreenshots:",
       "images": [],
       "attachments": [],
       "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:03:34Z",
+          "updatedShort": "2026-04-22",
+          "body": "Issue completed",
+          "images": [],
+          "attachments": []
+        },
         {
           "author": "ryanpfister",
           "updated": "2026-04-22T15:00:49Z",
@@ -199,7 +207,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 1,
+      "commentCount": 2,
       "lastCommentAt": "2026-04-22"
     },
     {
