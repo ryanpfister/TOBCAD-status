@@ -2,24 +2,10 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:05:11Z"
+    "checkedAt": "2026-04-22T17:05:39Z"
   },
-  "generatedAt": "2026-04-22T17:05:12.986Z",
+  "generatedAt": "2026-04-22T17:05:39.504Z",
   "items": [
-    {
-      "number": 48,
-      "title": "Emails in wrong time zone",
-      "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "Emails are in the wrong time zone",
-      "images": [],
-      "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
-    },
     {
       "number": 47,
       "title": "[BUG]: After an event is created",
@@ -70,6 +56,29 @@
       "comments": [],
       "commentCount": 0,
       "lastCommentAt": null
+    },
+    {
+      "number": 48,
+      "title": "Emails in wrong time zone",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Emails are in the wrong time zone",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T17:05:29Z",
+          "updatedShort": "2026-04-22",
+          "body": "Fixed and pushed. The root cause was the same as the PDF bug — Node.js runs in UTC on the server, so any Date method called without an explicit timeZone option uses UTC. Every email (priority alerts, 10-1 alerts, call closed, memo approved/rejected/submitted, password changed, daily/weekly reports) now formats all times through five helper functions that all specify timeZone: 'America/New_York'.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 43,
