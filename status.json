@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:06:17Z"
+    "checkedAt": "2026-04-22T15:07:30Z"
   },
-  "generatedAt": "2026-04-22T15:06:18.438Z",
+  "generatedAt": "2026-04-22T15:07:30.267Z",
   "items": [
     {
       "number": 34,
@@ -169,8 +169,8 @@
       "number": 23,
       "title": "Feature: Make a tab to view both the event and unit monitor side by side.",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Requestor: J. Garcia\n\nSummary:\nI want a view to see both pages side by side\n\nProblem to Solve:\nAllow units to see both.\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
