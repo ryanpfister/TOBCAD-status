@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:28:33Z"
+    "checkedAt": "2026-04-22T15:31:49Z"
   },
-  "generatedAt": "2026-04-22T15:28:36.750Z",
+  "generatedAt": "2026-04-22T15:31:49.936Z",
   "items": [
     {
       "number": 39,
@@ -192,6 +192,14 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T15:31:40Z",
+          "updatedShort": "2026-04-22",
+          "body": "Server — new GET /api/route endpoint (requires auth) proxies to the OSRM public routing API. OSRM uses OpenStreetMap road data and returns a detailed polyline with hundreds of coordinate points following actual streets. The server converts the GeoJSON [lon, lat] coordinates into Leaflet's [lat, lon] format before returning them.\n\nMapView — a useEffect fires whenever the officer's GPS position or their assigned call's geocoded location changes. It calls /api/route, stores the full road geometry in state, and renders it as a solid cyan Polyline. If OSRM is unreachable or returns no route (e.g., ...",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T15:25:20Z",
           "updatedShort": "2026-04-22",
           "body": "Its drawing a line across the map, we need to use roadways",
@@ -223,7 +231,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 4,
+      "commentCount": 5,
       "lastCommentAt": "2026-04-22"
     },
     {
