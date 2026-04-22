@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:53:32Z"
+    "checkedAt": "2026-04-22T15:54:17Z"
   },
-  "generatedAt": "2026-04-22T15:53:33.051Z",
+  "generatedAt": "2026-04-22T15:54:17.158Z",
   "items": [
     {
       "number": 43,
@@ -170,9 +170,18 @@
       "description": "Reporter: J. Garcia\n\nDate & Time: Consistent\n\nDescription:\nThere's a preset priority level for each event type. When that event is selected while creating a call, the preset level doesn't carry. It should obviously remain editable by the dispatcher, however in normal call creation that should carry over.\n\nWhere did this occur?\nAny/every device used, desktop\n\nSteps to Reproduce:\nCreate an event, select a high priority event type, it doesn't change on the editable screen or when you create it.\n\nExpected Behavior:/\nAny/every device used, desktop\n\nActual Behavior::\nIt stayed a level 3\n\nSeverity:\nL...",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:54:08Z",
+          "updatedShort": "2026-04-22",
+          "body": "The bug is on line 279 — the event type onChange only sets eventTypeId, never touches priority. A one-line fix",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 30,
