@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:46:28Z"
+    "checkedAt": "2026-04-22T15:47:09Z"
   },
-  "generatedAt": "2026-04-22T15:46:28.516Z",
+  "generatedAt": "2026-04-22T15:47:09.636Z",
   "items": [
     {
       "number": 39,
@@ -150,6 +150,14 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T15:47:00Z",
+          "updatedShort": "2026-04-22",
+          "body": "The UV (UNAVAILABLE) status uses text-white border-white — invisible against the light mode background. Changing it to text-cad-dim border-cad-dim, which is visible in both modes.",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T14:28:42Z",
           "updatedShort": "2026-04-22",
           "body": "See photos",
@@ -157,7 +165,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 1,
+      "commentCount": 2,
       "lastCommentAt": "2026-04-22"
     },
     {
