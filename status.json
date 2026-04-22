@@ -1,14 +1,14 @@
 [
   {
     "title": "Feature: Update Audit Logs",
-    "type": "bug",
+    "type": "feature",
     "status": "Open",
     "updated": "2026-04-22",
     "description": "Requestor: Ryan Pfister"
   },
   {
     "title": "Feature: Plot Map",
-    "type": "bug",
+    "type": "feature",
     "status": "Open",
     "updated": "2026-04-22",
     "description": "Requestor: J. Garcia"
