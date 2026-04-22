@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:07:30Z"
+    "checkedAt": "2026-04-22T15:11:37Z"
   },
-  "generatedAt": "2026-04-22T15:07:30.267Z",
+  "generatedAt": "2026-04-22T15:11:40.849Z",
   "items": [
     {
       "number": 34,
@@ -161,9 +161,18 @@
       "description": "Requestor: J. Garcia\n\nSummary:\nAllow accounts to click on the event from the unit monitor to get details about it, not just from the event monitor.\n\nProblem to Solve:\nAllow users to easily view events.\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:11:24Z",
+          "updatedShort": "2026-04-22",
+          "body": "UnitRow — make event number cell a clickable button calling onEventClick(eventId)\nDGroupSection — pass onEventClick through\nUnitStatusBoard — add selectedEventId state, render EventDetailModal",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 23,
