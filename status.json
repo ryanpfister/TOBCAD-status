@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:18:56Z"
+    "checkedAt": "2026-04-22T15:20:20Z"
   },
-  "generatedAt": "2026-04-22T15:18:57.261Z",
+  "generatedAt": "2026-04-22T15:20:23.219Z",
   "items": [
+    {
+      "number": 37,
+      "title": "[FEATURE]: Prevent screen from dimming",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "### Requester Name / Unit\n\nJ. Garcia\n\n### Feature Title\n\nPrevent screen from sleeping\n\n### Summary\n\nThis is being ran on tablet,s similar to youtube on a webbrowser the screen wont dim / go inactive, is there anything we can do to prevent screen diming when we are on the site?\n\n### What problem would this solve?\n\nScreen diming / timing out\n\n### Proposed Solution\n\nfigure it out\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues an...",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 36,
       "title": "[FEATURE]: Increase font size if possible",
