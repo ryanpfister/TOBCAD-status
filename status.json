@@ -2,9 +2,18 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:26:22Z"
+    "checkedAt": "2026-04-22T14:27:49Z"
   },
   "items": [
+    {
+      "number": 29,
+      "title": "When going to light mode certain things dont show",
+      "type": "bug",
+      "status": "Open",
+      "updated": "2026-04-22",
+      "description": "Reporter: Ryan Pfister",
+      "comments": []
+    },
     {
       "number": 28,
       "title": "Change Titles of Status Blocks",
