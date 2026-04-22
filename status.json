@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:56:36Z"
+    "checkedAt": "2026-04-22T14:57:14Z"
   },
-  "generatedAt": "2026-04-22T14:56:37.016Z",
+  "generatedAt": "2026-04-22T14:57:15.004Z",
   "items": [
     {
       "number": 32,
@@ -166,29 +166,6 @@
       "lastCommentAt": null
     },
     {
-      "number": 18,
-      "title": "Memo Print",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "When printing the memo book, the officer name should be displayed on the print out",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T14:55:05Z",
-          "updatedShort": "2026-04-22",
-          "body": "Change made see commit brookhaven-cad-system-NK6yM",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 1,
-      "lastCommentAt": "2026-04-22"
-    },
-    {
       "number": 21,
       "title": "None",
       "type": "bug",
@@ -234,6 +211,37 @@
       "comments": [],
       "commentCount": 0,
       "lastCommentAt": null
+    },
+    {
+      "number": 18,
+      "title": "Memo Print",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "When printing the memo book, the officer name should be displayed on the print out",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:56:57Z",
+          "updatedShort": "2026-04-22",
+          "body": "Integration made, issue closed.",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:55:05Z",
+          "updatedShort": "2026-04-22",
+          "body": "Change made see commit brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 2,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 17,
