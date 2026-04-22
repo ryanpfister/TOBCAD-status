@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:57:14Z"
+    "checkedAt": "2026-04-22T14:59:14Z"
   },
-  "generatedAt": "2026-04-22T14:57:15.004Z",
+  "generatedAt": "2026-04-22T14:59:16.451Z",
   "items": [
+    {
+      "number": 33,
+      "title": "[FEATURE]: Rejecting Memo Book",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nProcess of rejecting memo books\n\n### Summary\n\nWhen a supervisor rejects a memo book, email the user, then put it back in their queue and allow them to fix it. Then allow them to resubmit the memo book for approval.\n\n### What problem would this solve?\n\nMemo book rejection\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nNotifications\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and thi...",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 32,
       "title": "[FEATURE]: Closing / submitting memo book",
