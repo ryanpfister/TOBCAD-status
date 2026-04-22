@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:05:39Z"
+    "checkedAt": "2026-04-22T17:08:03Z"
   },
-  "generatedAt": "2026-04-22T17:05:39.504Z",
+  "generatedAt": "2026-04-22T17:08:04.311Z",
   "items": [
     {
       "number": 47,
@@ -44,20 +44,6 @@
       "lastCommentAt": null
     },
     {
-      "number": 44,
-      "title": "Allow users to delete user accounts",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "Allow admins to delete user accounts of lower permission then them from admin panel.",
-      "images": [],
-      "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
-    },
-    {
       "number": 48,
       "title": "Emails in wrong time zone",
       "type": "bug",
@@ -73,6 +59,29 @@
           "updated": "2026-04-22T17:05:29Z",
           "updatedShort": "2026-04-22",
           "body": "Fixed and pushed. The root cause was the same as the PDF bug — Node.js runs in UTC on the server, so any Date method called without an explicit timeZone option uses UTC. Every email (priority alerts, 10-1 alerts, call closed, memo approved/rejected/submitted, password changed, daily/weekly reports) now formats all times through five helper functions that all specify timeZone: 'America/New_York'.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 44,
+      "title": "Allow users to delete user accounts",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Allow admins to delete user accounts of lower permission then them from admin panel.",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T17:07:55Z",
+          "updatedShort": "2026-04-22",
+          "body": "Done and pushed. Here's how it works:\n\nUI: A red DELETE button appears in the Actions column only for users the logged-in admin outranks. Clicking it replaces itself with an inline CONFIRM / CANCEL prompt — no accidental deletions. The row disappears from the list immediately on success.\n\nServer enforces the same rules independently:\n\nCannot delete yourself\nCannot delete a peer (same role) or anyone with a higher role\nReturns a clear error message if either check fails\nHard-deletes the row and writes an audit log entry with the deleted user's username and role",
           "images": [],
           "attachments": []
         }
