@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:43:36Z"
+    "checkedAt": "2026-04-22T16:51:22Z"
   },
-  "generatedAt": "2026-04-22T16:43:36.452Z",
+  "generatedAt": "2026-04-22T16:51:22.393Z",
   "items": [
     {
       "number": 46,
@@ -86,9 +86,18 @@
       "description": "Common name not showing on information box for CC or either event or unit monitor",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:51:12Z",
+          "updatedShort": "2026-04-22",
+          "body": "Map marker clipping (second attempt): The previous fix (iconSize: [0, 0]) alone wasn't enough. The label div now uses position: absolute; top: 0; left: 0 so it breaks out of the 0×0 Leaflet container entirely instead of depending on overflow: visible behavior. pointer-events: none is also added so clicks still register on the marker.\n\nCommon name: The field was missing end-to-end — it wasn't stored anywhere when a common location was selected.\n\nDB: new location_common_name column, migration 0014\nServer: added to schema, event service (list/detail/create/update), route schemas\nClient: saved whe...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 39,
