@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:24:10Z"
+    "checkedAt": "2026-04-22T15:25:32Z"
   },
-  "generatedAt": "2026-04-22T15:24:12.277Z",
+  "generatedAt": "2026-04-22T15:25:35.790Z",
   "items": [
     {
       "number": 39,
@@ -197,13 +197,21 @@
       "number": 25,
       "title": "Feature: Plot Map",
       "type": "feature",
-      "status": "Completed",
-      "isCompleted": true,
+      "status": "Open",
+      "isCompleted": false,
       "updated": "2026-04-22",
       "description": "Requestor: J. Garcia\n\nSummary:\nAble to plot call locations on the map and create a route to it?\n\nProblem to Solve:\nMore map featues\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
       "attachments": [],
       "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:25:20Z",
+          "updatedShort": "2026-04-22",
+          "body": "Its drawing a line across the map, we need to use roadways",
+          "images": [],
+          "attachments": []
+        },
         {
           "author": "ryanpfister",
           "updated": "2026-04-22T15:18:48Z",
@@ -229,7 +237,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 3,
+      "commentCount": 4,
       "lastCommentAt": "2026-04-22"
     },
     {
