@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:53:18Z"
+    "checkedAt": "2026-04-22T14:55:49Z"
   },
-  "generatedAt": "2026-04-22T14:53:20.050Z",
+  "generatedAt": "2026-04-22T14:55:49.435Z",
   "items": [
     {
       "number": 31,
@@ -161,9 +161,18 @@
       "description": "When printing the memo book, the officer name should be displayed on the print out",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T14:55:05Z",
+          "updatedShort": "2026-04-22",
+          "body": "Change made see commit brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 21,
