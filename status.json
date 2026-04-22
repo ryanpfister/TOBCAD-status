@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:24:48Z"
+    "checkedAt": "2026-04-22T16:26:24Z"
   },
-  "generatedAt": "2026-04-22T16:24:50.326Z",
+  "generatedAt": "2026-04-22T16:26:25.245Z",
   "items": [
     {
       "number": 44,
@@ -122,8 +122,8 @@
       "number": 36,
       "title": "[FEATURE]: Increase font size if possible",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "### Requester Name / Unit\n\nJ. Garcai\n\n### Feature Title\n\nChange Font Size\n\n### Summary\n\nAllow users to change font size, maybe a preferences page to allow users to change UI settings such as font size, color scheme, day / night mode?\n\n### What problem would this solve?\n\nUI issues\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and this request is not a duplicate",
       "images": [],
