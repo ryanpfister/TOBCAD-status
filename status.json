@@ -2,9 +2,18 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:15:30Z"
+    "checkedAt": "2026-04-22T14:26:22Z"
   },
   "items": [
+    {
+      "number": 28,
+      "title": "Change Titles of Status Blocks",
+      "type": "bug",
+      "status": "Open",
+      "updated": "2026-04-22",
+      "description": "Reporter: Ryan Pfister",
+      "comments": []
+    },
     {
       "number": 27,
       "title": "Feature: Update Audit Logs",
