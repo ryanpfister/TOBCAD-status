@@ -2,16 +2,39 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:32:18Z"
+    "checkedAt": "2026-04-22T17:35:55Z"
   },
-  "generatedAt": "2026-04-22T17:32:18.416Z",
+  "generatedAt": "2026-04-22T17:35:56.183Z",
   "items": [
+    {
+      "number": 48,
+      "title": "Emails in wrong time zone",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Emails are in the wrong time zone",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T17:05:29Z",
+          "updatedShort": "2026-04-22",
+          "body": "Fixed and pushed. The root cause was the same as the PDF bug — Node.js runs in UTC on the server, so any Date method called without an explicit timeZone option uses UTC. Every email (priority alerts, 10-1 alerts, call closed, memo approved/rejected/submitted, password changed, daily/weekly reports) now formats all times through five helper functions that all specify timeZone: 'America/New_York'.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
     {
       "number": 47,
       "title": "[BUG]: After an event is created",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "After an event is created, if you want to switch the event type, the event list disappears in the drop box",
       "images": [],
@@ -30,11 +53,34 @@
       "lastCommentAt": "2026-04-22"
     },
     {
+      "number": 46,
+      "title": "[FEATURE]: Dispatch log",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "On specifically the dispatchers side, could every single one of their entries be tracked on a dispatch log along with manual entried (when we run dmv and stuffl ike that), similar to the paper one they have now to replace it?",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T17:27:10Z",
+          "updatedShort": "2026-04-22",
+          "body": "LOG button in the top bar (dispatcher view only) — click to open the full-screen log panel, click again to return to the normal view\n\nAuto-logged entries for every dispatcher action:\n\nCall created — CC #XXXX CREATED — [type] at [location]\nCall closed — CC #XXXX CLOSED\nUnit dispatched to a call — STA21 DISPATCHED TO CC #XXXX\nUnit cleared from a call — STA21 CLEARED FROM CC #XXXX\nStatus changes — STA21: AV → DP — CC #XXXX\nCheck-ins / sign-offs — STA21 CHECKED IN (Vehicle: 123)\nManual entries — free-text input at the bottom of the log panel for DMV runs, phone calls, shift notes, etc.\n\nColor codi...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
       "number": 44,
       "title": "Allow users to delete user accounts",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Allow admins to delete user accounts of lower permission then them from admin panel.",
       "images": [],
@@ -74,52 +120,6 @@
         }
       ],
       "commentCount": 4,
-      "lastCommentAt": "2026-04-22"
-    },
-    {
-      "number": 48,
-      "title": "Emails in wrong time zone",
-      "type": "bug",
-      "status": "Completed",
-      "isCompleted": true,
-      "updated": "2026-04-22",
-      "description": "Emails are in the wrong time zone",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T17:05:29Z",
-          "updatedShort": "2026-04-22",
-          "body": "Fixed and pushed. The root cause was the same as the PDF bug — Node.js runs in UTC on the server, so any Date method called without an explicit timeZone option uses UTC. Every email (priority alerts, 10-1 alerts, call closed, memo approved/rejected/submitted, password changed, daily/weekly reports) now formats all times through five helper functions that all specify timeZone: 'America/New_York'.",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 1,
-      "lastCommentAt": "2026-04-22"
-    },
-    {
-      "number": 46,
-      "title": "[FEATURE]: Dispatch log",
-      "type": "feature",
-      "status": "Completed",
-      "isCompleted": true,
-      "updated": "2026-04-22",
-      "description": "On specifically the dispatchers side, could every single one of their entries be tracked on a dispatch log along with manual entried (when we run dmv and stuffl ike that), similar to the paper one they have now to replace it?",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-22T17:27:10Z",
-          "updatedShort": "2026-04-22",
-          "body": "LOG button in the top bar (dispatcher view only) — click to open the full-screen log panel, click again to return to the normal view\n\nAuto-logged entries for every dispatcher action:\n\nCall created — CC #XXXX CREATED — [type] at [location]\nCall closed — CC #XXXX CLOSED\nUnit dispatched to a call — STA21 DISPATCHED TO CC #XXXX\nUnit cleared from a call — STA21 CLEARED FROM CC #XXXX\nStatus changes — STA21: AV → DP — CC #XXXX\nCheck-ins / sign-offs — STA21 CHECKED IN (Vehicle: 123)\nManual entries — free-text input at the bottom of the log panel for DMV runs, phone calls, shift notes, etc.\n\nColor codi...",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 1,
       "lastCommentAt": "2026-04-22"
     },
     {
