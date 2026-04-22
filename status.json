@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:18:26Z"
+    "checkedAt": "2026-04-22T15:18:43Z"
   },
-  "generatedAt": "2026-04-22T15:18:26.381Z",
+  "generatedAt": "2026-04-22T15:18:44.462Z",
   "items": [
     {
       "number": 36,
@@ -164,6 +164,14 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T15:18:33Z",
+          "updatedShort": "2026-04-22",
+          "body": "Call location pins\n\nEvery active/pending call is geocoded and plotted as a colored diamond pin\nP1 calls = red, P2 = amber, P3+ = gray\nThe pin label shows the event type code (e.g. 1039/ASSTO), and the popup shows event number, type, priority, status, and address\nRouting to assigned call\n\nIf an officer is signed in, assigned to a call, and has GPS active — a dashed cyan line is drawn from their pin to the call pin\nThe assigned call popup shows \"★ MY CALL\" to make it immediately identifiable\nThe \"Get Directions\" link opens Google Maps with the officer's GPS as the starting point; for dispatchers...",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T15:18:13Z",
           "updatedShort": "2026-04-22",
           "body": "Geocode event addresses on map open using the existing /api/geocode Nominatim proxy, throttled and cached per address string\nPlot event pins colored by priority (P1=red, P2=amber, others=dim) with event number, type, and address in the popup\nRoute polyline — if an officer is on duty and assigned to a call, draw a dashed green line from their GPS pin to that call's pin\nDirections link — event popup opens Google Maps with saddr=officer GPS → daddr=event location when the viewer is an officer with GPS; otherwise just the event location\nFit bounds includes both officer pins and event pins",
@@ -171,7 +179,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 1,
+      "commentCount": 2,
       "lastCommentAt": "2026-04-22"
     },
     {
