@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:42:39Z"
+    "checkedAt": "2026-04-22T15:44:37Z"
   },
-  "generatedAt": "2026-04-22T15:42:39.928Z",
+  "generatedAt": "2026-04-22T15:44:37.316Z",
   "items": [
     {
       "number": 39,
@@ -175,9 +175,18 @@
           "link": "https://brookhavenny-my.sharepoint.com/personal/rpfister_brookhavenny_gov/Documents/Apps/Microsoft%20Forms/CAD%20System%20Bug%20Report/Question/Screenshot%202026-04-22%20102454_anonymous.png"
         }
       ],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:44:27Z",
+          "updatedShort": "2026-04-22",
+          "body": "claude/brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 27,
