@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:18:12Z"
+    "checkedAt": "2026-04-22T15:18:26Z"
   },
-  "generatedAt": "2026-04-22T15:18:13.116Z",
+  "generatedAt": "2026-04-22T15:18:26.381Z",
   "items": [
     {
       "number": 36,
@@ -161,9 +161,18 @@
       "description": "Requestor: J. Garcia\n\nSummary:\nAble to plot call locations on the map and create a route to it?\n\nProblem to Solve:\nMore map featues\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:18:13Z",
+          "updatedShort": "2026-04-22",
+          "body": "Geocode event addresses on map open using the existing /api/geocode Nominatim proxy, throttled and cached per address string\nPlot event pins colored by priority (P1=red, P2=amber, others=dim) with event number, type, and address in the popup\nRoute polyline — if an officer is on duty and assigned to a call, draw a dashed green line from their GPS pin to that call's pin\nDirections link — event popup opens Google Maps with saddr=officer GPS → daddr=event location when the viewer is an officer with GPS; otherwise just the event location\nFit bounds includes both officer pins and event pins",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 24,
