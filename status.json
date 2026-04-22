@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:21:52Z"
+    "checkedAt": "2026-04-22T15:23:55Z"
   },
-  "generatedAt": "2026-04-22T15:21:55.313Z",
+  "generatedAt": "2026-04-22T15:23:56.019Z",
   "items": [
+    {
+      "number": 39,
+      "title": "[BUG]: On map the icon on the map isnt showing the text / its getting cut off",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "### Reporter Name / Unit\n\nRyan Pfister\n\n### Date & Time of Issue\n\n4/22/26 11:23\n\n### Bug Title\n\nSee above\n\n### Description\n\nWhen going to the map and seeing units or locations plotted, the icon with the text is getting cut off \n\n<img width=\"452\" height=\"298\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1d4c8245-cbf1-4a2c-a0a1-bec6fbc3e3c3\" />\n\n### Where did this occur?\n\nMap Page\n\n### Steps to Reproduce\n\n_No response_\n\n### Expected Behavior\n\n_No response_\n\n### Actual Behavior\n\n_No response_\n\n### Severity\n\nLow (minor issue)\n\n### Frequency\n\nNone\n\n### Device Type\n\nNone\n\n### Browser ...",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 38,
       "title": "[FEATURE]: Make dispatch have the ability to mark units in service",
