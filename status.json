@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:12:39Z"
+    "checkedAt": "2026-04-22T15:12:53Z"
   },
-  "generatedAt": "2026-04-22T15:12:39.257Z",
+  "generatedAt": "2026-04-22T15:12:53.336Z",
   "items": [
     {
       "number": 34,
@@ -164,6 +164,14 @@
       "comments": [
         {
           "author": "ryanpfister",
+          "updated": "2026-04-22T15:12:39Z",
+          "updatedShort": "2026-04-22",
+          "body": "See commit claude/brookhaven-cad-system-NK6yM",
+          "images": [],
+          "attachments": []
+        },
+        {
+          "author": "ryanpfister",
           "updated": "2026-04-22T15:12:27Z",
           "updatedShort": "2026-04-22",
           "body": "licking an event number in the unit monitor now opens the full call detail modal. The implementation:\n\nUnitRow — event number cell is a clickable <button> (with stopPropagation) when the unit has an active event; clicking the row itself still opens the status modal as before\nDGroupSection — passes onEventClick through to each UnitRow\nUnitStatusBoard — tracks selectedEventId locally and renders EventDetailModal when set; canEdit/canNote are derived from the logged-in user's role so officers get read-only view while dispatchers can edit\nWorks in all tab configurations — units-only, split view, a...",
@@ -179,7 +187,7 @@
           "attachments": []
         }
       ],
-      "commentCount": 2,
+      "commentCount": 3,
       "lastCommentAt": "2026-04-22"
     },
     {
