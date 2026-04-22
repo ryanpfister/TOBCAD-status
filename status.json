@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:20:20Z"
+    "checkedAt": "2026-04-22T15:21:52Z"
   },
-  "generatedAt": "2026-04-22T15:20:23.219Z",
+  "generatedAt": "2026-04-22T15:21:55.313Z",
   "items": [
+    {
+      "number": 38,
+      "title": "[FEATURE]: Make dispatch have the ability to mark units in service",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "### Requester Name / Unit\n\nJ. Garcia\n\n### Feature Title\n\nHave dispatch make units go in service\n\n### Summary\n\nCan we make it so dispatch has the ability to mark units in service even if the officer hasn't logged on yet? Example: McCabe not logging in because he doesnt take a tablet. Can they log him on to update his status on the CAD?\nMaybe a drop down box when logging in to select a unit, and shows info?\n\n### What problem would this solve?\n\nUnits not logging in\n\n### Proposed Solution\n\nSee above\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this...",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 37,
       "title": "[FEATURE]: Prevent screen from dimming",
