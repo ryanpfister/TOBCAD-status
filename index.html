@@ -15,7 +15,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: 0 auto;
       padding: 32px 20px;
     }
@@ -67,13 +67,8 @@
       color: white;
     }
 
-    .bug-button {
-      background: #dc2626;
-    }
-
-    .feature-button {
-      background: #2563eb;
-    }
+    .bug-button { background: #dc2626; }
+    .feature-button { background: #2563eb; }
 
     .notice {
       margin-bottom: 28px;
@@ -90,7 +85,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
-      margin: 24px 0 32px 0;
+      margin: 24px 0 24px 0;
     }
 
     .card h2 {
@@ -104,17 +99,9 @@
       font-weight: bold;
     }
 
-    .server-online {
-      color: #059669;
-    }
-
-    .server-offline {
-      color: #dc2626;
-    }
-
-    .server-unknown {
-      color: #6b7280;
-    }
+    .server-online { color: #059669; }
+    .server-offline { color: #dc2626; }
+    .server-unknown { color: #6b7280; }
 
     .server-meta {
       margin-top: 8px;
@@ -123,24 +110,32 @@
       line-height: 1.4;
     }
 
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, minmax(140px, 180px));
       gap: 12px;
       margin-bottom: 20px;
     }
 
-    .controls select {
-      padding: 10px 12px;
+    .toolbar input,
+    .toolbar select {
+      padding: 11px 12px;
       border: 1px solid #d1d5db;
       border-radius: 10px;
       background: white;
       font-size: 14px;
+      width: 100%;
     }
 
     .section-title {
       margin: 24px 0 14px 0;
       font-size: 22px;
+    }
+
+    .subtext {
+      margin: -6px 0 16px 0;
+      color: #6b7280;
+      font-size: 14px;
     }
 
     .issue-list {
@@ -156,7 +151,6 @@
     .issue.in-progress { border-left-color: #f59e0b; }
     .issue.planned { border-left-color: #8b5cf6; }
     .issue.completed { border-left-color: #10b981; }
-    .issue.closed { border-left-color: #6b7280; }
 
     .top-row {
       display: flex;
@@ -170,6 +164,19 @@
     .issue h3 {
       margin: 0;
       font-size: 20px;
+    }
+
+    .issue-title-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .issue-number {
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: bold;
     }
 
     .badges {
@@ -211,10 +218,35 @@
       margin-bottom: 14px;
     }
 
+    .issue-footer {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    .toggle-comments-btn {
+      margin-top: 8px;
+      background: #eef2ff;
+      color: #3730a3;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     .comments-section {
       margin-top: 14px;
       border-top: 1px solid #e5e7eb;
       padding-top: 14px;
+      display: none;
+    }
+
+    .comments-section.open {
+      display: block;
     }
 
     .comments-section h4 {
@@ -225,14 +257,14 @@
     .comment {
       background: #f9fafb;
       border-radius: 10px;
-      padding: 10px 12px;
-      margin-bottom: 10px;
+      padding: 12px;
+      margin-bottom: 12px;
     }
 
     .comment-meta {
       font-size: 12px;
       color: #6b7280;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-weight: bold;
     }
 
@@ -241,6 +273,23 @@
       line-height: 1.45;
       color: #374151;
       white-space: pre-wrap;
+    }
+
+    .comment-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .comment-images img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid #e5e7eb;
+      background: #fff;
     }
 
     .empty {
@@ -255,15 +304,48 @@
       text-align: center;
     }
 
-    @media (max-width: 640px) {
-      .header h1 {
-        font-size: 26px;
-      }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 9999;
+    }
 
-      .issue h3,
-      .submit-card h2 {
-        font-size: 18px;
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      color: white;
+      font-size: 34px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .toolbar {
+        grid-template-columns: 1fr 1fr;
       }
+    }
+
+    @media (max-width: 640px) {
+      .header h1 { font-size: 26px; }
+      .issue h3, .submit-card h2 { font-size: 18px; }
+      .toolbar { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -295,8 +377,7 @@
         <h2>Suggestion Requests</h2>
         <p>
           This is to request or report anything that is not yet implemented, such as suggestions,
-          new features, ideas, or improvements. This is not to report a bug. Bug reports will be
-          addressed faster than suggestion requests to help keep the platform operational.
+          new features, ideas, or improvements. This is not to report a bug.
         </p>
         <a
           class="submit-button feature-button"
@@ -323,7 +404,7 @@
       </div>
 
       <div class="card">
-        <h2>Open / Active</h2>
+        <h2>Active Items</h2>
         <div class="value" id="activeCount">0</div>
       </div>
 
@@ -344,27 +425,38 @@
       </div>
     </div>
 
-    <div class="controls">
+    <div class="toolbar">
+      <input id="searchBox" type="text" placeholder="Search title, description, or comments..." />
       <select id="typeFilter">
         <option value="all">All Types</option>
         <option value="bug">Bugs</option>
         <option value="feature">Features</option>
       </select>
-
       <select id="statusFilter">
+        <option value="active">Active Only</option>
         <option value="all">All Statuses</option>
         <option value="Open">Open</option>
         <option value="In Progress">In Progress</option>
         <option value="Planned">Planned</option>
         <option value="Completed">Completed</option>
-        <option value="Closed">Closed</option>
+      </select>
+      <select id="sortFilter">
+        <option value="updated-desc">Newest First</option>
+        <option value="updated-asc">Oldest First</option>
+        <option value="comments-desc">Most Comments</option>
       </select>
     </div>
 
     <h2 class="section-title">Current Items</h2>
+    <div class="subtext">Completed items are hidden by default.</div>
     <div id="issueList" class="issue-list"></div>
 
     <div class="footer">TOBCAD public status page</div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightboxClose">&times;</div>
+    <img id="lightboxImage" alt="Expanded comment image" />
   </div>
 
   <script>
@@ -391,9 +483,9 @@
     function renderSummary(items) {
       document.getElementById("totalCount").textContent = items.length;
       document.getElementById("activeCount").textContent =
-        items.filter(i => ["Open", "In Progress", "Planned"].includes(i.status)).length;
+        items.filter(i => !i.isCompleted).length;
       document.getElementById("completedCount").textContent =
-        items.filter(i => i.status === "Completed").length;
+        items.filter(i => i.isCompleted).length;
 
       const dates = items.map(i => i.updated).filter(Boolean).sort().reverse();
       document.getElementById("lastUpdated").textContent = dates[0] || "-";
@@ -415,13 +507,9 @@
       const status = serverStatus.status || "Unknown";
       text.textContent = status;
 
-      if (status === "Online") {
-        text.classList.add("server-online");
-      } else if (status === "Offline") {
-        text.classList.add("server-offline");
-      } else {
-        text.classList.add("server-unknown");
-      }
+      if (status === "Online") text.classList.add("server-online");
+      else if (status === "Offline") text.classList.add("server-offline");
+      else text.classList.add("server-unknown");
 
       meta.textContent = `HTTP ${serverStatus.statusCode || "-"} • Checked ${serverStatus.checkedAt || "-"}`;
     }
@@ -429,6 +517,8 @@
     function renderItems() {
       const typeFilter = document.getElementById("typeFilter").value;
       const statusFilter = document.getElementById("statusFilter").value;
+      const sortFilter = document.getElementById("sortFilter").value;
+      const search = document.getElementById("searchBox").value.trim().toLowerCase();
 
       let filtered = [...allItems];
 
@@ -436,11 +526,35 @@
         filtered = filtered.filter(i => i.type === typeFilter);
       }
 
-      if (statusFilter !== "all") {
+      if (statusFilter === "active") {
+        filtered = filtered.filter(i => !i.isCompleted);
+      } else if (statusFilter !== "all") {
         filtered = filtered.filter(i => i.status === statusFilter);
       }
 
-      filtered.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+      if (search) {
+        filtered = filtered.filter(item => {
+          const haystack = [
+            item.title,
+            item.description,
+            ...(item.comments || []).map(c => c.body)
+          ].join(" ").toLowerCase();
+          return haystack.includes(search);
+        });
+      }
+
+      if (sortFilter === "updated-asc") {
+        filtered.sort((a, b) => new Date(a.updated) - new Date(b.updated));
+      } else if (sortFilter === "comments-desc") {
+        filtered.sort((a, b) => (b.commentCount || 0) - (a.commentCount || 0));
+      } else {
+        filtered.sort((a, b) => {
+          if ((a.isCompleted ? 1 : 0) !== (b.isCompleted ? 1 : 0)) {
+            return (a.isCompleted ? 1 : 0) - (b.isCompleted ? 1 : 0);
+          }
+          return new Date(b.updated) - new Date(a.updated);
+        });
+      }
 
       const container = document.getElementById("issueList");
 
@@ -449,20 +563,33 @@
         return;
       }
 
-      container.innerHTML = filtered.map(item => {
+      container.innerHTML = filtered.map((item, index) => {
         const statusClass = item.status.toLowerCase().replace(/\s+/g, "-");
         const typeClass = item.type === "bug" ? "badge-type-bug" : "badge-type-feature";
+        const commentsId = `comments-${index}-${item.number}`;
 
         const commentsHtml = (item.comments && item.comments.length)
           ? `
-            <div class="comments-section">
+            <button class="toggle-comments-btn" onclick="toggleComments('${commentsId}', this)">
+              Show Updates (${item.comments.length})
+            </button>
+            <div class="comments-section" id="${commentsId}">
               <h4>Recent Updates</h4>
               ${item.comments.map(comment => `
                 <div class="comment">
                   <div class="comment-meta">
-                    ${escapeHtml(comment.author)} • ${escapeHtml(comment.updated || "-")}
+                    ${escapeHtml(comment.author)} • ${escapeHtml(comment.updatedShort || "-")}
                   </div>
                   <div class="comment-body">${escapeHtml(comment.body || "")}</div>
+                  ${
+                    comment.images && comment.images.length
+                      ? `<div class="comment-images">
+                          ${comment.images.map(src => `
+                            <img src="${escapeAttribute(src)}" alt="Comment image" onclick="openLightbox('${escapeJs(src)}')" />
+                          `).join("")}
+                        </div>`
+                      : ""
+                  }
                 </div>
               `).join("")}
             </div>
@@ -472,7 +599,10 @@
         return `
           <div class="issue ${statusClass}">
             <div class="top-row">
-              <h3>${escapeHtml(item.title)}</h3>
+              <div class="issue-title-line">
+                <h3>${escapeHtml(item.title)}</h3>
+                <span class="issue-number">#${item.number}</span>
+              </div>
               <div class="badges">
                 <span class="badge ${typeClass}">${item.type.toUpperCase()}</span>
                 <span class="badge badge-status">${escapeHtml(item.status)}</span>
@@ -481,9 +611,36 @@
             <div class="meta">Updated: ${escapeHtml(item.updated || "-")}</div>
             <div class="description">${escapeHtml(item.description || "No description provided.")}</div>
             ${commentsHtml}
+            <div class="issue-footer">
+              <span>Comments: ${item.commentCount || 0}</span>
+              <span>Last comment: ${escapeHtml(item.lastCommentAt || "None")}</span>
+            </div>
           </div>
         `;
       }).join("");
+    }
+
+    function toggleComments(id, button) {
+      const section = document.getElementById(id);
+      if (!section) return;
+      section.classList.toggle("open");
+      button.textContent = section.classList.contains("open")
+        ? "Hide Updates"
+        : button.textContent.replace("Hide Updates", "Show Updates");
+      if (!section.classList.contains("open")) {
+        const countText = section.querySelectorAll(".comment").length;
+        button.textContent = `Show Updates (${countText})`;
+      }
+    }
+
+    function openLightbox(src) {
+      document.getElementById("lightboxImage").src = src;
+      document.getElementById("lightbox").classList.add("open");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("open");
+      document.getElementById("lightboxImage").src = "";
     }
 
     function escapeHtml(text) {
@@ -492,8 +649,24 @@
       return div.innerHTML;
     }
 
+    function escapeAttribute(text) {
+      return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function escapeJs(text) {
+      return String(text || "").replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+    }
+
     document.getElementById("typeFilter").addEventListener("change", renderItems);
     document.getElementById("statusFilter").addEventListener("change", renderItems);
+    document.getElementById("sortFilter").addEventListener("change", renderItems);
+    document.getElementById("searchBox").addEventListener("input", renderItems);
+    document.getElementById("lightbox").addEventListener("click", closeLightbox);
+    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
 
     loadStatus();
   </script>
