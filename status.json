@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T14:59:14Z"
+    "checkedAt": "2026-04-22T15:00:39Z"
   },
-  "generatedAt": "2026-04-22T14:59:16.451Z",
+  "generatedAt": "2026-04-22T15:00:39.354Z",
   "items": [
+    {
+      "number": 34,
+      "title": "[FEATURE]: Approved memo book",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nApproved Memo Book Process\n\n### Summary\n\nWhen a officers memo book is approved, email the user a copy of the PDF for their records.\n\n### What problem would this solve?\n\nLogging pdf's\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and this request is not a duplicate",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 33,
       "title": "[FEATURE]: Rejecting Memo Book",
