@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T17:02:18Z"
+    "checkedAt": "2026-04-22T17:03:44Z"
   },
-  "generatedAt": "2026-04-22T17:02:18.700Z",
+  "generatedAt": "2026-04-22T17:03:44.925Z",
   "items": [
     {
       "number": 48,
@@ -89,8 +89,8 @@
       "number": 42,
       "title": "CC Update",
       "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "If we can make the CC number editable as well on created call, in instance dispatch puts in the wrong CC number.",
       "images": [],
