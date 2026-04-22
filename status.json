@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:27:34Z"
+    "checkedAt": "2026-04-22T15:28:33Z"
   },
-  "generatedAt": "2026-04-22T15:27:34.697Z",
+  "generatedAt": "2026-04-22T15:28:36.750Z",
   "items": [
     {
       "number": 39,
@@ -180,20 +180,6 @@
       "lastCommentAt": null
     },
     {
-      "number": 27,
-      "title": "Feature: Update Audit Logs",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-22",
-      "description": "Requestor: Ryan Pfister\n\nSummary:\nUpdate audit logs to log all new features added\n\nProblem to Solve:\nIncreased Security\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
-      "images": [],
-      "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
-    },
-    {
       "number": 25,
       "title": "Feature: Plot Map",
       "type": "feature",
@@ -238,6 +224,29 @@
         }
       ],
       "commentCount": 4,
+      "lastCommentAt": "2026-04-22"
+    },
+    {
+      "number": 27,
+      "title": "Feature: Update Audit Logs",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-22",
+      "description": "Requestor: Ryan Pfister\n\nSummary:\nUpdate audit logs to log all new features added\n\nProblem to Solve:\nIncreased Security\n\nWorkflow / Use Case:\n\n\nAlternate Ideas:",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T15:28:20Z",
+          "updatedShort": "2026-04-22",
+          "body": "POST /broadcasts | broadcast:sent — who sent it, message length\nPOST /common-locations | location:created — name and address\nPATCH /common-locations/:id | location:updated — which fields changed\nDELETE /common-locations/:id | location:deleted\nPOST /exports/lucity/:eventId | export:queued — which event was queued\nPATCH /exports/lucity/:exportId | export:status_updated — exported or skipped\nGET /exports/lucity/download | export:downloaded — row count in the CSV\nDELETE /address-flags/:flagId | address:flag_removed — address and flag type\nPATCH /tours/my-tour | tour:unit_changed — old and new unit...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
       "lastCommentAt": "2026-04-22"
     },
     {
