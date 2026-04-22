@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:47:09Z"
+    "checkedAt": "2026-04-22T15:47:19Z"
   },
-  "generatedAt": "2026-04-22T15:47:09.636Z",
+  "generatedAt": "2026-04-22T15:47:20.437Z",
   "items": [
     {
       "number": 39,
@@ -136,8 +136,8 @@
       "number": 29,
       "title": "When going to light mode certain things dont show",
       "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
+      "status": "Completed",
+      "isCompleted": true,
       "updated": "2026-04-22",
       "description": "Reporter: Ryan Pfister\n\nDate & Time: N/A\n\nDescription:\nWhen you enter light mode the unavailable button no longer shows.\n\nWhere did this occur?\nN/A\n\nSteps to Reproduce:\nN/A\n\nExpected Behavior:/\nN/A\n\nActual Behavior::\nButton doesnt show\n\nSeverity:\nLow (minor inconvenience)\n\nFrequency:\nAlways\n\nDevice Type:\nDesktop\n\nBrower / App:\nChrome\n\nError Messages:\n\n\nAdditional Notes:\n\n\nScreenshots:",
       "images": [],
