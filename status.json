@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:49:28Z"
+    "checkedAt": "2026-04-22T15:50:29Z"
   },
-  "generatedAt": "2026-04-22T15:49:30.393Z",
+  "generatedAt": "2026-04-22T15:50:29.231Z",
   "items": [
+    {
+      "number": 41,
+      "title": "[BUG]: Unexpected Token",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "After creating a call, could close or change the status. Showed the message \"Unexpected token '<'\"<html>,h\"... is not valid JSON\"",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 40,
       "title": "CC on call box info and monitors",
