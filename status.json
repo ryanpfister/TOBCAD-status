@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:29:47Z"
+    "checkedAt": "2026-04-22T16:37:45Z"
   },
-  "generatedAt": "2026-04-22T16:29:47.334Z",
+  "generatedAt": "2026-04-22T16:37:45.977Z",
   "items": [
     {
       "number": 46,
@@ -114,9 +114,18 @@
       "description": "### Requester Name / Unit\n\nJ. Garcia\n\n### Feature Title\n\nHave dispatch make units go in service\n\n### Summary\n\nCan we make it so dispatch has the ability to mark units in service even if the officer hasn't logged on yet? Example: McCabe not logging in because he doesnt take a tablet. Can they log him on to update his status on the CAD?\nMaybe a drop down box when logging in to select a unit, and shows info?\n\n### What problem would this solve?\n\nUnits not logging in\n\n### Proposed Solution\n\nSee above\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this...",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:37:36Z",
+          "updatedShort": "2026-04-22",
+          "body": "Server (/tours/index.ts):\n\nGET /tours/field-officers — returns active officers/supervisors for the dropdown\nGET /tours/all-units — returns all active units grouped by DGroup\nPOST /tours/manual-checkin — creates a tour for the selected officer, handles conflicts, emits real-time updates, and audit-logs the action\nClient:\n\nManualCheckinModal.tsx — full modal with officer dropdown (with info card), unit dropdown (grouped by DGroup with status indicator), vehicle number, optional mileage/condition/court return date\nUnitStatusBoard.tsx — \"+ MANUAL CHECK-IN\" button in the header, visible to dispatch...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 37,
