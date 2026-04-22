@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:59:43Z"
+    "checkedAt": "2026-04-22T17:02:18Z"
   },
-  "generatedAt": "2026-04-22T16:59:43.666Z",
+  "generatedAt": "2026-04-22T17:02:18.700Z",
   "items": [
+    {
+      "number": 48,
+      "title": "Emails in wrong time zone",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Emails are in the wrong time zone",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 47,
       "title": "[BUG]: After an event is created",
