@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T16:17:05Z"
+    "checkedAt": "2026-04-22T16:17:24Z"
   },
-  "generatedAt": "2026-04-22T16:17:07.157Z",
+  "generatedAt": "2026-04-22T16:17:24.221Z",
   "items": [
     {
       "number": 44,
@@ -142,9 +142,18 @@
       "description": "### Requester Name / Unit\n\nRyan Pfister\n\n### Feature Title\n\nApproved Memo Book Process\n\n### Summary\n\nWhen a officers memo book is approved, email the user a copy of the PDF for their records.\n\n### What problem would this solve?\n\nLogging pdf's\n\n### Proposed Solution\n\nSee comments\n\n### Alternative Ideas\n\n_No response_\n\n### Priority\n\nLow\n\n### Area\n\nUI / UX\n\n### Who would use this and when?\n\n_No response_\n\n### Additional Notes\n\n_No response_\n\n### Confirmation\n\n- [x] I have checked existing issues and this request is not a duplicate",
       "images": [],
       "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-22T16:17:15Z",
+          "updatedShort": "2026-04-22",
+          "body": "pdf.service.ts — New server-side PDF generator using pdfkit (no headless browser). Produces a letter-size document with:\n\nAgency header + \"✓ APPROVED\" stamp\nTour info grid: officer, unit, vehicle, date, start/end times, start/end mileage, miles driven, court return, condition\nMemo entries table: time · type · text, with automatic page breaks\nApproval record block: approved by, reviewed at, submitted at\nSignature lines for officer and supervisor\nFooter with generation timestamp\nFile is named MemoBook_<UNIT>_<YYYY-MM-DD>.pdf.\n\nemail.service.ts — New sendMemoApproved() method sends the email with...",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-22"
     },
     {
       "number": 33,
