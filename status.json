@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-22T15:51:01Z"
+    "checkedAt": "2026-04-22T15:51:37Z"
   },
-  "generatedAt": "2026-04-22T15:51:01.270Z",
+  "generatedAt": "2026-04-22T15:51:37.919Z",
   "items": [
+    {
+      "number": 43,
+      "title": "Monitor View",
+      "type": "feature",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-22",
+      "description": "Can we have the full event type info visible on both monitors? Some event types are more comprehensible then others but showing the full title would help",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 42,
       "title": "CC Update",
