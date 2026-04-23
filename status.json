@@ -2,38 +2,10 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T06:26:07Z"
+    "checkedAt": "2026-04-23T06:43:33Z"
   },
-  "generatedAt": "2026-04-23T06:26:07.730Z",
+  "generatedAt": "2026-04-23T06:43:33.292Z",
   "items": [
-    {
-      "number": 52,
-      "title": "[BUG]: Status",
-      "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-23",
-      "description": "When hitting 10-36 (on scene) in the call info box, it changes their status symbol to acknowledge instead of on scene. Their status should change to acknowledge after they acknowledge the pop-up from being assigned to the call.",
-      "images": [],
-      "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
-    },
-    {
-      "number": 50,
-      "title": "[BUG]: Memo Book",
-      "type": "feature",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-23",
-      "description": "sort by ascending or descending times instead of type, possible add a date column",
-      "images": [],
-      "attachments": [],
-      "comments": [],
-      "commentCount": 0,
-      "lastCommentAt": null
-    },
     {
       "number": 49,
       "title": "Feature: Scanner for ID’s",
@@ -42,6 +14,20 @@
       "isCompleted": false,
       "updated": "2026-04-23",
       "description": "Requestor: Jake Prague\n\nSummary:\nWhen adding a person allow an officer to scan ID’s add a way where we can quickly scan them as well. (barcode scan)\nAlso allow an officer to add a person, not just supervisors / admins\nProblem to Solve:\nSaves on input time. \n\nWorkflow / Use Case:\nAll units when obtaining a persons ID. \n\nAlternate Ideas:",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
+    {
+      "number": 52,
+      "title": "[BUG]: Status",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-23",
+      "description": "When hitting 10-36 (on scene) in the call info box, it changes their status symbol to acknowledge instead of on scene. Their status should change to acknowledge after they acknowledge the pop-up from being assigned to the call.",
       "images": [],
       "attachments": [],
       "comments": [],
@@ -70,6 +56,20 @@
       ],
       "commentCount": 1,
       "lastCommentAt": "2026-04-23"
+    },
+    {
+      "number": 50,
+      "title": "[BUG]: Memo Book",
+      "type": "feature",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-23",
+      "description": "sort by ascending or descending times instead of type, possible add a date column",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
     },
     {
       "number": 48,
