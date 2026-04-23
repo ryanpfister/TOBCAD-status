@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T03:36:20Z"
+    "checkedAt": "2026-04-23T03:37:04Z"
   },
-  "generatedAt": "2026-04-23T03:36:20.821Z",
+  "generatedAt": "2026-04-23T03:37:04.249Z",
   "items": [
     {
       "number": 52,
@@ -55,7 +55,7 @@
       "status": "Open",
       "isCompleted": false,
       "updated": "2026-04-23",
-      "description": "Requestor: Jake Prague\n\nSummary:\nWhen entering ID’s add a way where we can quickly scan them as well. (barcode scan)\n\nProblem to Solve:\nSaves on input time. \n\nWorkflow / Use Case:\nAll units when obtaining a persons ID. \n\nAlternate Ideas:",
+      "description": "Requestor: Jake Prague\n\nSummary:\nWhen adding a person allow an officer to scan ID’s add a way where we can quickly scan them as well. (barcode scan)\nAlso allow an officer to add a person, not just supervisors / admins\nProblem to Solve:\nSaves on input time. \n\nWorkflow / Use Case:\nAll units when obtaining a persons ID. \n\nAlternate Ideas:",
       "images": [],
       "attachments": [],
       "comments": [],
