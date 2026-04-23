@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T00:04:24Z"
+    "checkedAt": "2026-04-23T00:58:38Z"
   },
-  "generatedAt": "2026-04-23T00:04:24.390Z",
+  "generatedAt": "2026-04-23T00:58:38.812Z",
   "items": [
+    {
+      "number": 49,
+      "title": "Feature: Scanner for ID’s",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-23",
+      "description": "Requestor: Jake Prague\n\nSummary:\nWhen entering ID’s add a way where we can quickly scan them as well. \n\nProblem to Solve:\nSaves on input time. \n\nWorkflow / Use Case:\nAll units when obtaining a persons ID. \n\nAlternate Ideas:",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 48,
       "title": "Emails in wrong time zone",
