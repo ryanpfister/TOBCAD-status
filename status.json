@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T03:34:57Z"
+    "checkedAt": "2026-04-23T03:36:20Z"
   },
-  "generatedAt": "2026-04-23T03:34:59.803Z",
+  "generatedAt": "2026-04-23T03:36:20.821Z",
   "items": [
+    {
+      "number": 52,
+      "title": "[BUG]: Status",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-23",
+      "description": "When hitting 10-36 (on scene) in the call info box, it changes their status symbol to acknowledge instead of on scene. Their status should change to acknowledge after they acknowledge the pop-up from being assigned to the call.",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 51,
       "title": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
