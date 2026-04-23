@@ -2,9 +2,9 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T03:52:34Z"
+    "checkedAt": "2026-04-23T03:59:47Z"
   },
-  "generatedAt": "2026-04-23T03:52:34.639Z",
+  "generatedAt": "2026-04-23T03:59:47.174Z",
   "items": [
     {
       "number": 52,
@@ -19,29 +19,6 @@
       "comments": [],
       "commentCount": 0,
       "lastCommentAt": null
-    },
-    {
-      "number": 51,
-      "title": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
-      "type": "bug",
-      "status": "Open",
-      "isCompleted": false,
-      "updated": "2026-04-23",
-      "description": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
-      "images": [],
-      "attachments": [],
-      "comments": [
-        {
-          "author": "ryanpfister",
-          "updated": "2026-04-23T03:52:26Z",
-          "updatedShort": "2026-04-23",
-          "body": "How it works now: When a call has a cross street filled in and the address is a street name without a house number (e.g., SUNRISE HWY × HALLOCK AVE), the map now sends Nominatim the query \"SUNRISE HWY & HALLOCK AVE, Brookhaven, NY\" instead of just \"SUNRISE HWY, Brookhaven, NY\". Nominatim handles intersection queries well, so the pin drops at the actual intersection rather than somewhere along the full length of the street.",
-          "images": [],
-          "attachments": []
-        }
-      ],
-      "commentCount": 1,
-      "lastCommentAt": "2026-04-23"
     },
     {
       "number": 50,
@@ -70,6 +47,29 @@
       "comments": [],
       "commentCount": 0,
       "lastCommentAt": null
+    },
+    {
+      "number": 51,
+      "title": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
+      "type": "bug",
+      "status": "Completed",
+      "isCompleted": true,
+      "updated": "2026-04-23",
+      "description": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
+      "images": [],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "ryanpfister",
+          "updated": "2026-04-23T03:52:26Z",
+          "updatedShort": "2026-04-23",
+          "body": "How it works now: When a call has a cross street filled in and the address is a street name without a house number (e.g., SUNRISE HWY × HALLOCK AVE), the map now sends Nominatim the query \"SUNRISE HWY & HALLOCK AVE, Brookhaven, NY\" instead of just \"SUNRISE HWY, Brookhaven, NY\". Nominatim handles intersection queries well, so the pin drops at the actual intersection rather than somewhere along the full length of the street.",
+          "images": [],
+          "attachments": []
+        }
+      ],
+      "commentCount": 1,
+      "lastCommentAt": "2026-04-23"
     },
     {
       "number": 48,
