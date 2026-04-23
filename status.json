@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-23T03:34:02Z"
+    "checkedAt": "2026-04-23T03:34:57Z"
   },
-  "generatedAt": "2026-04-23T03:34:03.164Z",
+  "generatedAt": "2026-04-23T03:34:59.803Z",
   "items": [
+    {
+      "number": 51,
+      "title": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-23",
+      "description": "[FEATURE]: See if the map can search utilizing the cross street as well to plot a better location",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 50,
       "title": "[BUG]: Memo Book",
