@@ -2,10 +2,24 @@
   "serverStatus": {
     "status": "Online",
     "statusCode": "200",
-    "checkedAt": "2026-04-25T15:30:37Z"
+    "checkedAt": "2026-04-25T15:52:53Z"
   },
-  "generatedAt": "2026-04-25T15:30:38.665Z",
+  "generatedAt": "2026-04-25T15:52:54.127Z",
   "items": [
+    {
+      "number": 57,
+      "title": "Map incident plotting still not utilizing cross to plot accurately",
+      "type": "bug",
+      "status": "Open",
+      "isCompleted": false,
+      "updated": "2026-04-25",
+      "description": "Reporter: J. GARCIA\n\nDate & Time: 04/25/2025, 11:47\n\nDescription:\nI generated 2 calls, CC26-000035 and 36, both of which had a cross st and plotted on the map blocks away and for the first in another hamlet (primary rd was RT-112).\n\nWhere did this occur?\nMy account, Mac\n\nSteps to Reproduce:\n-\n\nExpected Behavior:/\nMy account, Mac\n\nActual Behavior::\n1st plotted miles away, 2nd was across CR-83 about 1.5 miles or so away\n\nSeverity:\nMedium (affects workflow)\n\nFrequency:\nAlways\n\nDevice Type:\nDesktop\n\nBrower / App:\nSafari\n\nError Messages:\n\n\nAdditional Notes:\n\n\nScreenshots:",
+      "images": [],
+      "attachments": [],
+      "comments": [],
+      "commentCount": 0,
+      "lastCommentAt": null
+    },
     {
       "number": 49,
       "title": "Feature: Scanner for ID’s",
